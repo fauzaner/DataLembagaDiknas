@@ -17,3 +17,6 @@ Route::get('/', function () {
     return view('beranda');
 });
 
+Route::get('/form', function () {
+    return view('form');
+});
