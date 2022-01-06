@@ -28,10 +28,10 @@
       </li>
       <li>
        <a href="#">
-         <i class='bx bx-user' ></i>
-         <span class="links_name">User</span>
+         <i class='bx bxs-download'></i>
+         <span class="links_name">Download</span>
        </a>
-       <span class="tooltip">User</span>
+       <span class="tooltip">Download</span>
      </li>
      <li>
        <a href="#">
