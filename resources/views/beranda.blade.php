@@ -49,8 +49,8 @@
         <div class="row">
           <div class="col-md-6">
             <div class="text-dinas container-fluid py-5">
-              <h1 class="display-5 fw-bold"><img class="Logo" src="{{asset('assets/img/Logo.png')}}"><br> Dinas Pendidikan Kabupaten Blitar</h1>
-              <h1 class="display-5 fw-bold">Selamat Datang</h1>
+            <img class="Logo" src="{{asset('assets/img/Logo.png')}}">  
+            <h1 class="text-img display-5 fw-bold">Dinas Pendidikan Kabupaten Blitar <br> Selamat Datang</h1>
             </div>
           </div>
         </div>
