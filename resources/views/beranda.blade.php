@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{asset('assets/css/admins.css')}}">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{{asset('css/app.css')}}" />
    </head>
 <body>
-  <!--sidebar-->
   <div class="sidebar">
     <div class="logo-details">
         <div class="logo_name">Data Lembaga</div>
@@ -29,10 +29,10 @@
       </li>
       <li>
        <a href="#">
-         <i class='bx bxs-download'></i>
-         <span class="links_name">Download</span>
+         <i class='bx bx-user' ></i>
+         <span class="links_name">User</span>
        </a>
-       <span class="tooltip">Download</span>
+       <span class="tooltip">User</span>
      </li>
      <li>
        <a href="#">
@@ -45,9 +45,7 @@
   </div>
   <!--akhir sidebar-->
 <section class="home-section">
-  <div class="text">Dashboard</div>
     <div class="jumbotron p-5 mb-4">
-      <div class="card">
         <div class="row">
           <div class="col-md-6">
             <div class="text-dinas container-fluid py-5">
@@ -56,7 +54,6 @@
             </div>
           </div>
         </div>
-      </div>
     </div>
       <div class = "cardBox">
         <div class="card">
