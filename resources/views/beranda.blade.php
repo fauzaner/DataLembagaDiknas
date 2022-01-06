@@ -8,6 +8,7 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
    </head>
 <body>
+  <!--sidebar-->
   <div class="sidebar">
     <div class="logo-details">
         <div class="logo_name">Data Lembaga</div>
@@ -42,6 +43,7 @@
      </li>
     </ul>
   </div>
+  <!--akhir sidebar-->
 <section class="home-section">
   <div class="text">Dashboard</div>
     <div class="jumbotron p-5 mb-4">
