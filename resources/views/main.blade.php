@@ -21,18 +21,18 @@
          <span class="tooltip">Search</span>
       </li>
       <li>
-        <a href="admin-dashboard.php">
+        <a href="{{url('/')}}">
           <i class='bx bx-grid-alt'></i>
           <span class="links_name">Dashboard</span>
         </a>
          <span class="tooltip">Dashboard</span>
       </li>
       <li>
-       <a href="#">
-         <i class='bx bx-user' ></i>
-         <span class="links_name">User</span>
-       </a>
-       <span class="tooltip">User</span>
+        <a href="#">
+         <i class='bx bxs-download'></i>
+         <span class="links_name">Download</span>
+        </a>
+       <span class="tooltip">Download</span>
      </li>
      <li>
        <a href="#">
