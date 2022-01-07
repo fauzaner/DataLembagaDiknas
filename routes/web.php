@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Imports\PDImport;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Models\PesertaDidik;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,4 +18,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {return view('beranda'); });
 Route::get('/form', function () { return view('form'); });
 Route::get('/upload', function () { return view('upload'); });
-Route::get('/pd', function () { return view('daftar_pd'); });
+Route::get('/pd', function () { $peserta_didik = PesertaDidik::all(); return view('daftar_pd',['peserta_didik'=>$peserta_didik]); });
+Route::post('/pd', function () { Excel::import(new PDImport, request()->file('file')); return back(); });
