@@ -16,4 +16,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {return view('beranda'); });
 Route::get('/form', function () { return view('form'); });
 Route::get('/upload', function () { return view('upload'); });
-Route::get('/main', function () { return view('daftar_pd'); });
+Route::get('/pd', function () { return view('daftar_pd'); });

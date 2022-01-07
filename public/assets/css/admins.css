@@ -223,8 +223,8 @@
 
 .text-dinas {
     color: #11101d;
-    font-size: 25px;
-    font-weight: 500px;
+    font-size: 20px;
+    font-weight: 300px;
     margin: 18px;
 }
 
@@ -237,17 +237,17 @@
 
 .Logo {
     width: 100px;
-    margin-bottom: -35px;
-    padding-bottom: 10px;
-    padding-top: 15px;
+    margin-bottom: -45px;
+    padding-bottom: 30px;
+    padding-top: 0px;
 }
 
 
 .text-img {
   text-align: left;
-  margin-top: -100px;
+  margin-top: -130px;
   margin-left: 120px;
-  padding-top: 10px;
+  padding-top: 50px;
   padding-bottom: 10px;
 }
 
@@ -266,7 +266,7 @@
 
 .cardBox{
   position: relative;
-  width: 100%;
+  width: 90%;
   padding: 20px;
   display: grid;
   grid-template-columns: repeat(4,1fr);
