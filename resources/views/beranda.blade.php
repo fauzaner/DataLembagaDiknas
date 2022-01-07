@@ -11,7 +11,7 @@
 <body>
   <div class="sidebar">
     <div class="logo-details">
-        <div class="logo_name">Data Lembaga</div>
+        <div class="logo_name">Data Warehouse</div>
         <i class='bx bx-menu' id="btn" ></i>
     </div>
     <ul class="nav-list">
@@ -21,7 +21,7 @@
          <span class="tooltip">Search</span>
       </li>
       <li>
-        <a href="admin-dashboard.php">
+        <a href="#">
           <i class='bx bx-grid-alt'></i>
           <span class="links_name">Dashboard</span>
         </a>
@@ -29,10 +29,10 @@
       </li>
       <li>
        <a href="#">
-         <i class='bx bx-user' ></i>
-         <span class="links_name">User</span>
+         <i class='bx bxs-download'></i>
+         <span class="links_name">Download</span>
        </a>
-       <span class="tooltip">User</span>
+       <span class="tooltip">Download</span>
      </li>
      <li>
        <a href="#">
