@@ -28,7 +28,7 @@
          <span class="tooltip">Dashboard</span>
       </li>
       <li>
-       <a href="#">
+       <a href="{{url('/')}}">
          <i class='bx bxs-download'></i>
          <span class="links_name">Download</span>
        </a>
