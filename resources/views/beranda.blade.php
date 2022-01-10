@@ -21,14 +21,14 @@
          <span class="tooltip">Search</span>
       </li>
       <li>
-        <a href="#">
+        <a href="{{url('/')}}">
           <i class='bx bx-grid-alt'></i>
           <span class="links_name">Dashboard</span>
         </a>
          <span class="tooltip">Dashboard</span>
       </li>
       <li>
-       <a href="{{url('/')}}">
+       <a href="#">
          <i class='bx bxs-download'></i>
          <span class="links_name">Download</span>
        </a>
