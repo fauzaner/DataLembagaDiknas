@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 
 <html lang="en" dir="ltr">
@@ -42,20 +43,19 @@
        <span class="tooltip">Setting</span>
      </li>
     </ul>
+=======
+@extends('main')
+@section('content')
+<div class="jumbotron p-4 mb-3">
+  <div class="text-dinas container-fluid">
+    <img class="Logo" src="{{asset('assets/img/Logo.png')}}">
+      <h1 class="text-img display-8 fw-bold">Dinas Pendidikan Kabupaten Blitar <br> Selamat Datang</h1>
+>>>>>>> a616e00486be40bce8cc3ee2e5a1fb0df3f2b16e
   </div>
-  <!--akhir sidebar-->
-<section class="home-section">
-    <div class="jumbotron p-5 mb-4">
-            <div class="text-dinas container-fluid py-5">
-            <img class="Logo" src="{{asset('assets/img/Logo.png')}}">  
-            <h1 class="text-img display-5 fw-bold">Dinas Pendidikan Kabupaten Blitar <br> Selamat Datang</h1>
-            </div>
-          </div>
-        </div>
-    </div>
-      <div class = "cardBox">
-        <div class="card">
-          <div>
+</div>
+  <div class = "cardBox">
+    <div class="card">
+      <div>
             <div class = "numbers">1,504</div>
             <div class="cardName">Daily Views</div>
           </div>
@@ -92,32 +92,7 @@
             <img src="images/eye.svg" width="50px" height="50px" alt="eye">
           </div>
         </div>
-        </div>
-        </div>
-        </div>
-    </section>
-
-
-  <script>
-  let sidebar = document.querySelector(".sidebar");
-  let closeBtn = document.querySelector("#btn");
-  let searchBtn = document.querySelector(".bx-search");
-
-  closeBtn.addEventListener("click", ()=>{
-    sidebar.classList.toggle("open");
-    menuBtnChange();
-  });
-
-  searchBtn.addEventListener("click", ()=>{
-    sidebar.classList.toggle("open");
-    menuBtnChange();
-  });
-
-  function menuBtnChange() {
-   if(sidebar.classList.contains("open")){
-     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
-   }else {
-     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
-   }
-  }
-  </script>
+      </div>
+    </div>
+</div>
+@endsection
