@@ -1,0 +1,45 @@
+*{
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #bbdfc8;
+}
+
+.row {
+    background-color: whitesmoke;
+    border-radius: 30px;
+    margin-top: 70px;
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    -webkit-box-shadow: 1px 1px 1px #b8b9be, 6px 6px 6px #414047;
+    box-shadow: 1px 1px 1px #b8b9be, 6px 6px 6px #414047;
+}
+
+.logo {
+    margin-left: 50px;
+}
+
+.btn1{
+    border-radius: 40px;
+    width: 30%;
+    background-color: #bbdfc8;
+    color: whitesmoke;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.btn1:hover {
+    background-color: #E4E9F7;
+    color: white;
+    -webkit-box-shadow: 3px 3px 10px #b8b9be, 6px 6px 6px #414047;
+    box-shadow: 3px 3px 10px #b8b9be, 6px 6px 6px #414047;
+}
+
+.art {
+    margin-left: 80px;
+}
+

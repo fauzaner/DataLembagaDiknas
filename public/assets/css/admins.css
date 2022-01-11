@@ -217,8 +217,7 @@
   height: 50%;
   margin-left: 20px;
   border-radius: 30px;
-  margin-top: 23px;
-  padding: 50px;
+  margin-top: 30px;
 }
 
 .text-dinas {
@@ -306,13 +305,71 @@
     margin-top: 5px;
 }
 
+.cardBox1{
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 40px;
+  transition: transform .3s;
+}
+
+.cardBox1 .card {
+    position: relative;
+    background-color: #75cfb8;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    -webkit-box-shadow: 3px 3px 10px #b8b9be, 6px 6px 6px #414047;
+    box-shadow: 3px 3px 10px #b8b9be, 6px 6px 6px #414047;
+    
+  }
+
+.cardBox1 .card:hover{
+  transform: translateY(-15px);
+  transition: transform .3s;
+  background-color: #f0e5d8;
+}
+
+.cardBox1 .card .numbers {
+    position: relative;
+    font-weight: 500;
+    font-size: 2.5rem;
+    color: whitesmoke;
+}
+
+.cardBox1 .card .cardName {
+    color: #595260;
+    font-size: 1.1em;
+    margin-top: 5px;
+}
+
+
+
 .box-formulir {
-    padding-right: 100px;
-    margin-right: 120px;
 }
 
 .form-group {
   margin-bottom: 5px;
+}
+
+.btn1{
+  border-radius: 40px;
+  width: 10%;
+  background-color: turquoise;
+  color: whitesmoke;
+  margin-left: 80px;
+  margin-top: 20px;
+}
+
+.btn1:hover {
+  background-color: #E4E9F7;
+  color: white;
+  -webkit-box-shadow: 3px 3px 10px #b8b9be, 6px 6px 6px #414047;
+  box-shadow: 3px 3px 10px #b8b9be, 6px 6px 6px #414047;
 }
   
 @media (max-width: 420px) {
