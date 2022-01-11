@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="{{asset('css/app.css')}}" />
    </head>
 <body>
+  @include('sweetalert::alert')
   <div class="sidebar">
     <div class="logo-details">
-        <div class="logo_name">Data Lembaga</div>
+        <div class="logo_name">Data Warehouse</div>
         <i class='bx bx-menu' id="btn" ></i>
     </div>
     <ul class="nav-list">
