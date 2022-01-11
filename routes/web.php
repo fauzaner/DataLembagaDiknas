@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Imports\PDImport;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Models\PesertaDidik;
+use App\Models\Guru;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,3 +23,6 @@ Route::get('/pd', function () { $peserta_didik = PesertaDidik::all(); return vie
 Route::post('/pd', function () { Excel::import(new PDImport, request()->file('file')); return back(); });
 Route::get('/login', function () {return view('login'); });
 Route::get('/admin', function () {return view('admin'); });
+Route::post('/pd/', function () { Excel::import(new PDImport, request()->file('file')); return back(); });
+Route::get('/guru', function () { $guru = Guru::all(); return view('daftar_guru',['guru'=>$guru]); });
+

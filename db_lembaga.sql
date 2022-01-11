@@ -46,7 +46,7 @@ CREATE TABLE `failed_jobs` (
 
 CREATE TABLE `guru` (
   `no` int(20) NOT NULL,
-  `nama` varchar(255) NOT NULL,
+  `nama_gr` varchar(255) NOT NULL,
   `nuptk` varchar(50) DEFAULT NULL,
   `jk` enum('L','P','Laki-Laki','Perempuan') DEFAULT NULL,
   `tmpt_lhr` varchar(50) DEFAULT NULL,
@@ -88,7 +88,7 @@ CREATE TABLE `guru` (
   `bank` varchar(100) DEFAULT NULL,
   `nmr_rek_bank` varchar(100) DEFAULT NULL,
   `rek_nama` varchar(255) DEFAULT NULL,
-  `nik` varchar(100) NOT NULL,
+  `nik_gr` varchar(100) NOT NULL,
   `no_kk` varchar(100) DEFAULT NULL,
   `karpeg` varchar(100) DEFAULT NULL,
   `karis_karsu` varchar(100) DEFAULT NULL,
@@ -157,13 +157,13 @@ CREATE TABLE `personal_access_tokens` (
 
 CREATE TABLE `peserta_didik` (
   `no` int(20) NOT NULL,
-  `nama` varchar(255) NOT NULL,
+  `nama_pd` varchar(255) NOT NULL,
   `nipd` varchar(20) DEFAULT NULL,
   `jenis_kelamin` enum('Laki-laki','Perempuan','L','P') DEFAULT NULL,
   `nisn` varchar(50) DEFAULT NULL,
   `tmp_lhr` varchar(50) DEFAULT NULL,
   `tgl_lhr` date DEFAULT NULL,
-  `nik` varchar(40) NOT NULL,
+  `nik_pd` varchar(40) NOT NULL,
   `agama` varchar(30) DEFAULT NULL,
   `alamat` varchar(255) DEFAULT NULL,
   `rt` varchar(10) DEFAULT NULL,
@@ -290,7 +290,7 @@ INSERT INTO `peserta_didik` (`no`, `nama`, `nipd`, `jenis_kelamin`, `nisn`, `tmp
 
 CREATE TABLE `tendik` (
   `no` int(20) NOT NULL,
-  `nama` varchar(255) NOT NULL,
+  `nama_tendik` varchar(255) NOT NULL,
   `nuptk` varchar(50) DEFAULT NULL,
   `jk` enum('L','P','Laki-Laki','Perempuan') DEFAULT NULL,
   `tmpt_lhr` varchar(50) DEFAULT NULL,
@@ -332,7 +332,7 @@ CREATE TABLE `tendik` (
   `bank` varchar(100) DEFAULT NULL,
   `nmr_rek_bank` varchar(100) DEFAULT NULL,
   `rek_nama` varchar(255) DEFAULT NULL,
-  `nik` varchar(100) NOT NULL,
+  `nik_tendik` varchar(100) NOT NULL,
   `no_kk` varchar(100) DEFAULT NULL,
   `karpeg` varchar(100) DEFAULT NULL,
   `karis_karsu` varchar(100) DEFAULT NULL,
@@ -373,7 +373,7 @@ ALTER TABLE `failed_jobs`
 -- Indexes for table `guru`
 --
 ALTER TABLE `guru`
-  ADD PRIMARY KEY (`nik`);
+  ADD PRIMARY KEY (`nik_gr`);
 
 --
 -- Indexes for table `migrations`
@@ -399,13 +399,13 @@ ALTER TABLE `personal_access_tokens`
 -- Indexes for table `peserta_didik`
 --
 ALTER TABLE `peserta_didik`
-  ADD PRIMARY KEY (`nik`);
+  ADD PRIMARY KEY (`nik_pd`);
 
 --
 -- Indexes for table `tendik`
 --
 ALTER TABLE `tendik`
-  ADD PRIMARY KEY (`nik`);
+  ADD PRIMARY KEY (`nik_tendik`);
 
 --
 -- Indexes for table `users`
