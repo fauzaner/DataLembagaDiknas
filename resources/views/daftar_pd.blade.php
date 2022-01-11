@@ -1,8 +1,10 @@
 @extends('main')
 @section('content')
-<div class="relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
+    <div class="relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
             <div class="container">
                 <div class="row">
+                    <caption>Data Peserta Didik</caption>
+                    <br><br>
                     <form action="/pd" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="input-group mb-3">
@@ -11,74 +13,74 @@
                         </div>
                     </form>
                     <div class="table-responsive">
-                        <table class="table table-striped table-hover table-bordered">
+                        <table class="table table-hover table-bordered yajra-datatable" width="100%" cellspacing="0">
                             <thead>
-                                <tr>
-                                    <th scope="col">No</th>
-                                    <th scope="col">Nama</th>
-                                    <th scope="col">NIPD</th>
-                                    <th scope="col">JK</th>
-                                    <th scope="col">NISN</th>
-                                    <th scope="col">Tempat Lahir</th>
-                                    <th scope="col">Tanggal Lahir</th>
-                                    <th scope="col">NIK</th>
-                                    <th scope="col">Agama</th>
-                                    <th scope="col">Alamat</th>
-                                    <th scope="col">RT</th>
-                                    <th scope="col">RW</th>
-                                    <th scope="col">Dusun</th>
-                                    <th scope="col">Kelurahan</th>
-                                    <th scope="col">Kecamatan</th>
-                                    <th scope="col">Kode Pos</th>
-                                    <th scope="col">Jenis Tinggal</th>
-                                    <th scope="col">Alat Transportasi</th>
-                                    <th scope="col">Telepon</th>
-                                    <th scope="col">HP</th>
-                                    <th scope="col">E-Mail</th>
-                                    <th scope="col">SKHUN</th>
-                                    <th scope="col">Penerima KPS</th>
-                                    <th scope="col">No. KPS</th>
-                                    <th scope="col">Nama Ayah</th>
-                                    <th scope="col">Tahun Lahir Ayah</th>
-                                    <th scope="col">Jenjang Pendidikan Ayah</th>
-                                    <th scope="col">Pekerjaan Ayah</th>
-                                    <th scope="col">Penghasilan Ayah</th>
-                                    <th scope="col">NIK Ayah</th>
-                                    <th scope="col">Nama Ibu</th>
-                                    <th scope="col">Tahun Lahir Ibu</th>
-                                    <th scope="col">Jenjang Pendidikan Ibu</th>
-                                    <th scope="col">Pekerjaan Ibu</th>
-                                    <th scope="col">Penghasilan Ibu</th>
-                                    <th scope="col">NIK Ibu</th>
-                                    <th scope="col">Nama Wali</th>
-                                    <th scope="col">Tahun Lahir Wali</th>
-                                    <th scope="col">Jenjang Pendidikan Wali</th>
-                                    <th scope="col">Pekerjaan Wali</th>
-                                    <th scope="col">Penghasilan Wali</th>
-                                    <th scope="col">NIK Wali</th>
-                                    <th scope="col">Rombel Saat Ini</th>
-                                    <th scope="col">No Peserta UN</th>
-                                    <th scope="col">No Seri Ijazah</th>
-                                    <th scope="col">Nomor KIP</th>
-                                    <th scope="col">Nama di KIP</th>
-                                    <th scope="col">Nomor KKS</th>
-                                    <th scope="col">No Registrasi Akta Lahir</th>
-                                    <th scope="col">Bank</th>
-                                    <th scope="col">Nomor Rekening Bank</th>
-                                    <th scope="col">Rekening Atas Nama</th>
-                                    <th scope="col">Layak PIP(usulan dari sekolah)</th>
-                                    <th scope="col">Alasan Layak PIP</th>
-                                    <th scope="col">Kebutuhan Khusus</th>
-                                    <th scope="col">Sekolah Asal</th>
-                                    <th scope="col">Anak ke-berapa</th>
-                                    <th scope="col">Lintang</th>
-                                    <th scope="col">Bujur</th>
-                                    <th scope="col">No KK</th>
-                                    <th scope="col">Berat Badan</th>
-                                    <th scope="col">Tinggi Badan</th>
-                                    <th scope="col">Lingkar Kepala</th>
-                                    <th scope="col">Jumlah Saudara Kandung</th>
-                                    <th scope="col">Jarak Rumah ke Sekolah(KM)</th>
+                                <tr class="text-center">
+                                    <th>No</th>
+                                    <th>Nama</th>
+                                    <th>NIPD</th>
+                                    <th>JK</th>
+                                    <th>NISN</th>
+                                    <th>Tempat Lahir</th>
+                                    <th>Tanggal Lahir</th>
+                                    <th>NIK</th>
+                                    <th>Agama</th>
+                                    <th>Alamat</th>
+                                    <th>RT</th>
+                                    <th>RW</th>
+                                    <th>Dusun</th>
+                                    <th>Kelurahan</th>
+                                    <th>Kecamatan</th>
+                                    <th>Kode Pos</th>
+                                    <th>Jenis Tinggal</th>
+                                    <th>Alat Transportasi</th>
+                                    <th>Telepon</th>
+                                    <th>HP</th>
+                                    <th>E-Mail</th>
+                                    <th>SKHUN</th>
+                                    <th>Penerima KPS</th>
+                                    <th>No. KPS</th>
+                                    <th>Nama Ayah</th>
+                                    <th>Tahun Lahir Ayah</th>
+                                    <th>Jenjang Pendidikan Ayah</th>
+                                    <th>Pekerjaan Ayah</th>
+                                    <th>Penghasilan Ayah</th>
+                                    <th>NIK Ayah</th>
+                                    <th>Nama Ibu</th>
+                                    <th>Tahun Lahir Ibu</th>
+                                    <th>Jenjang Pendidikan Ibu</th>
+                                    <th>Pekerjaan Ibu</th>
+                                    <th>Penghasilan Ibu</th>
+                                    <th>NIK Ibu</th>
+                                    <th>Nama Wali</th>
+                                    <th>Tahun Lahir Wali</th>
+                                    <th>Jenjang Pendidikan Wali</th>
+                                    <th>Pekerjaan Wali</th>
+                                    <th>Penghasilan Wali</th>
+                                    <th>NIK Wali</th>
+                                    <th>Rombel Saat Ini</th>
+                                    <th>No Peserta UN</th>
+                                    <th>No Seri Ijazah</th>
+                                    <th>Nomor KIP</th>
+                                    <th>Nama di KIP</th>
+                                    <th>Nomor KKS</th>
+                                    <th>No Registrasi Akta Lahir</th>
+                                    <th>Bank</th>
+                                    <th>Nomor Rekening Bank</th>
+                                    <th>Rekening Atas Nama</th>
+                                    <th>Layak PIP(usulan dari sekolah)</th>
+                                    <th>Alasan Layak PIP</th>
+                                    <th>Kebutuhan Khusus</th>
+                                    <th>Sekolah Asal</th>
+                                    <th>Anak ke-berapa</th>
+                                    <th>Lintang</th>
+                                    <th>Bujur</th>
+                                    <th>No KK</th>
+                                    <th>Berat Badan</th>
+                                    <th>Tinggi Badan</th>
+                                    <th>Lingkar Kepala</th>
+                                    <th>Jumlah Saudara Kandung</th>
+                                    <th>Jarak Rumah ke Sekolah(KM)</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -161,5 +163,5 @@
                     </div>
                 </div>
             </div>
-        </div>
+</div>
 @endsection
