@@ -27,5 +27,4 @@ Route::post('/pd', function () { Excel::import(new PDImport, request()->file('fi
     return back(); });
 Route::get('/login', function () {return view('login'); });
 Route::get('/admin', function () {return view('admin'); });
-Route::post('/pd/', function () { Excel::import(new PDImport, request()->file('file')); return back(); });
 Route::get('/guru', function () { $guru = Guru::all(); return view('daftar_guru',['guru'=>$guru]); });
