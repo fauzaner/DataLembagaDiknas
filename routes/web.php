@@ -16,7 +16,7 @@ use App\Models\Guru;
 |
 */
 
-Route::get('/', function () {return view('sup-admin'); });
+Route::get('/', function () {return view('sup_admin'); });
 Route::get('/form', function () { return view('form'); });
 Route::get('/upload', function () { return view('upload'); });
 Route::get('/pd', function () { $peserta_didik = PesertaDidik::all(); return view('daftar_pd',['peserta_didik'=>$peserta_didik]); });

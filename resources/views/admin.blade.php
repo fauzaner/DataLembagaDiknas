@@ -2,8 +2,8 @@
 @section('content')
 <div class="jumbotron1 p-4 mb-3">
   <div class="text-dinas container-fluid">
-    <img class="Logo img-fluid" src="{{asset('assets/img/Logo.png')}}">
-      <h1 class="text-img display-8 fw-bold">Dinas Pendidikan Kabupaten Blitar</h1>
+    <img class="Logo1 img-fluid" src="{{asset('assets/img/Logo.png')}}">
+      <h1 class="text-admin display-8 fw-bold">Dinas Pendidikan Kabupaten Blitar</h1>
   </div>
 </div>
 <div class = "cardBox1">
