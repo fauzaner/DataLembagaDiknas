@@ -24,6 +24,12 @@ Route::get('/pd', function () { $peserta_didik = PesertaDidik::all();
 Route::post('/pd', function () { Excel::import(new PDImport, request()->file('file')); 
     Alert::success('Congrats', 'You\'ve Successfully Registered');
     return back(); });
-Route::get('/login', function () {return view('login'); });
 Route::get('/admin', function () {return view('admin'); });
 Route::get('/guru', function () { $guru = Guru::all(); return view('daftar_guru',['guru'=>$guru]); });
+
+//Login Routes
+Route::get('/login', [LoginController::class, 'login'])->username('login');
+Route::post('actionlogin', [LoginController::class, 'actionlogin'])->username('actionlogin');
+
+Route::get('sup-admin', [sup-adminController::class, 'sup-admin'])->username('sup-admin')->middleware('auth');
+Route::get('actionlogout', [LoginController::class, 'actionlogout'])->username('actionlogout')->middleware('auth');
