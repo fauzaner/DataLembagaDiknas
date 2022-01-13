@@ -20,7 +20,6 @@ use App\Models\Tendik;
 Route::get('/', function () {return view('sup_admin'); });
 Route::get('/form', function () { return view('form'); });
 Route::get('/upload', function () { return view('upload'); });
-
 Route::get('/pd', function () { $peserta_didik = PesertaDidik::all(); 
     return view('daftar_pd',['peserta_didik'=>$peserta_didik]); });
 Route::post('/pd', function () { Excel::import(new PDImport, request()->file('file')); 
