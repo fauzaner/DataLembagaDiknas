@@ -5,6 +5,7 @@ use App\Imports\PDImport;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Models\PesertaDidik;
 use App\Models\Guru;
+use App\Models\Tendik;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,6 +27,7 @@ Route::post('/pd', function () { Excel::import(new PDImport, request()->file('fi
     return back(); });
 Route::get('/admin', function () {return view('admin'); });
 Route::get('/guru', function () { $guru = Guru::all(); return view('daftar_guru',['guru'=>$guru]); });
+<<<<<<< HEAD
 
 //Login Routes
 Route::get('/login', [LoginController::class, 'login'])->username('login');
@@ -33,3 +35,6 @@ Route::post('actionlogin', [LoginController::class, 'actionlogin'])->username('a
 
 Route::get('sup-admin', [sup-adminController::class, 'sup-admin'])->username('sup-admin')->middleware('auth');
 Route::get('actionlogout', [LoginController::class, 'actionlogout'])->username('actionlogout')->middleware('auth');
+=======
+Route::get('/tk', function () { $tendik = Tendik::all(); return view('daftar_tendik',['tendik'=>$tendik]); });
+>>>>>>> aa19a10e6b9e8380d382354777fc9bf0f1585771

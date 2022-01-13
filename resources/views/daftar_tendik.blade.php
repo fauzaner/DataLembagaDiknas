@@ -3,7 +3,7 @@
 <div class="relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
             <div class="container">
                 <div class="row">
-                    <form action="/guru" method="post" enctype="multipart/form-data">
+                    <form action="/tk" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="input-group mb-3">
                             <input type="file" name="file" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
@@ -70,59 +70,59 @@
                                 @php
                                 $no = 0;
                                 @endphp
-                                @forelse ($guru as $gr)
+                                @forelse ($tendik as $tk)
                                 <tr>
                                     <th scope="row">{{ ++$no }}</th>
-                                    <td>{{ $gr->nama_gr }}</td>
-                                    <td>{{ $gr->nuptk }}</td>
-                                    <td>{{ $gr->jk }}</td>
-                                    <td>{{ $gr->tmp_lhr }}</td>
-                                    <td>{{ $gr->tgl_lhr }}</td>
-                                    <td>{{ $gr->nip }}</td>
-                                    <td>{{ $gr->status_kep }}</td>
-                                    <td>{{ $gr->jenis_ptk }}</td>
-                                    <td>{{ $gr->agama }}</td>
-                                    <td>{{ $gr->almt_jln }}</td>
-                                    <td>{{ $gr->rt }}</td>
-                                    <td>{{ $gr->rw }}</td>
-                                    <td>{{ $gr->nm_dusun }}</td>
-                                    <td>{{ $gr->desa_kelurahan }}</td>
-                                    <td>{{ $gr->kecamatan }}</td>
-                                    <td>{{ $gr->kd_pos }}</td>
-                                    <td>{{ $gr->telp }}</td>
-                                    <td>{{ $gr->hp }}</td>
-                                    <td>{{ $gr->email }}</td>
-                                    <td>{{ $gr->tgs_tambahan }}</td>
-                                    <td>{{ $gr->sk_cpns }}</td>
-                                    <td>{{ $gr->sk_pengangkatan }}</td>
-                                    <td>{{ $gr->tmt_pengangkatan }}</td>
-                                    <td>{{ $gr->lmb_pengangkatan }}</td>
-                                    <td>{{ $gr->pangkat_gol }}</td>
-                                    <td>{{ $gr->sumber_gaji }}</td>
-                                    <td>{{ $gr->nm_ibu }}</td>
-                                    <td>{{ $gr->nama_ibu }}</td>
-                                    <td>{{ $gr->status_perkawinan }}</td>
-                                    <td>{{ $gr->nm_suami_istri }}</td>
-                                    <td>{{ $gr->nip_suami_istri }}</td>
-                                    <td>{{ $gr->pekerjaan_suami_istri }}</td>
-                                    <td>{{ $gr->tmt_pns }}</td>
-                                    <td>{{ $gr->lisensi }}</td>
-                                    <td>{{ $gr->diklat_kep }}</td>
-                                    <td>{{ $gr->keahlian_braille }}</td>
-                                    <td>{{ $gr->keahlian_bhs_isyarat }}</td>
-                                    <td>{{ $gr->npwp }}</td>
-                                    <td>{{ $gr->nm_wjb_pajak }}</td>
-                                    <td>{{ $gr->kewarganegaraan }}</td>
-                                    <td>{{ $gr->bank }}</td>
-                                    <td>{{ $gr->nmr_rek_bank }}</td>
-                                    <td>{{ $gr->rek_nama }}</td>
-                                    <td>{{ $gr->nik_gr }}</td>
-                                    <td>{{ $gr->no_kk }}</td>
-                                    <td>{{ $gr->karpeg }}</td>
-                                    <td>{{ $gr->karis_karsu }}</td>
-                                    <td>{{ $gr->lintang }}</td>
-                                    <td>{{ $gr->bujur }}</td>
-                                    <td>{{ $gr->nuks }}</td>
+                                    <td>{{ $tk->nama_tendik }}</td>
+                                    <td>{{ $tk->nuptk }}</td>
+                                    <td>{{ $tk->jk }}</td>
+                                    <td>{{ $tk->tmp_lhr }}</td>
+                                    <td>{{ $tk->tgl_lhr }}</td>
+                                    <td>{{ $tk->nip }}</td>
+                                    <td>{{ $tk->status_kep }}</td>
+                                    <td>{{ $tk->jenis_ptk }}</td>
+                                    <td>{{ $tk->agama }}</td>
+                                    <td>{{ $tk->almt_jln }}</td>
+                                    <td>{{ $tk->rt }}</td>
+                                    <td>{{ $tk->rw }}</td>
+                                    <td>{{ $tk->nm_dusun }}</td>
+                                    <td>{{ $tk->desa_kelurahan }}</td>
+                                    <td>{{ $tk->kecamatan }}</td>
+                                    <td>{{ $tk->kd_pos }}</td>
+                                    <td>{{ $tk->telp }}</td>
+                                    <td>{{ $tk->hp }}</td>
+                                    <td>{{ $tk->email }}</td>
+                                    <td>{{ $tk->tgs_tambahan }}</td>
+                                    <td>{{ $tk->sk_cpns }}</td>
+                                    <td>{{ $tk->sk_pengangkatan }}</td>
+                                    <td>{{ $tk->tmt_pengangkatan }}</td>
+                                    <td>{{ $tk->lmb_pengangkatan }}</td>
+                                    <td>{{ $tk->pangkat_gol }}</td>
+                                    <td>{{ $tk->sumber_gaji }}</td>
+                                    <td>{{ $tk->nm_ibu }}</td>
+                                    <td>{{ $tk->nama_ibu }}</td>
+                                    <td>{{ $tk->status_perkawinan }}</td>
+                                    <td>{{ $tk->nm_suami_istri }}</td>
+                                    <td>{{ $tk->nip_suami_istri }}</td>
+                                    <td>{{ $tk->pekerjaan_suami_istri }}</td>
+                                    <td>{{ $tk->tmt_pns }}</td>
+                                    <td>{{ $tk->lisensi }}</td>
+                                    <td>{{ $tk->diklat_kep }}</td>
+                                    <td>{{ $tk->keahlian_braille }}</td>
+                                    <td>{{ $tk->keahlian_bhs_isyarat }}</td>
+                                    <td>{{ $tk->npwp }}</td>
+                                    <td>{{ $tk->nm_wjb_pajak }}</td>
+                                    <td>{{ $tk->kewarganegaraan }}</td>
+                                    <td>{{ $tk->bank }}</td>
+                                    <td>{{ $tk->nmr_rek_bank }}</td>
+                                    <td>{{ $tk->rek_nama }}</td>
+                                    <td>{{ $tk->nik_tendik }}</td>
+                                    <td>{{ $tk->no_kk }}</td>
+                                    <td>{{ $tk->karpeg }}</td>
+                                    <td>{{ $tk->karis_karsu }}</td>
+                                    <td>{{ $tk->lintang }}</td>
+                                    <td>{{ $tk->bujur }}</td>
+                                    <td>{{ $tk->nuks }}</td>
                                 </tr>
                                 @empty
                                 <td colspan="4" class="table-active text-center">Tidak Ada Data</td>
