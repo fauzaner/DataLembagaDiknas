@@ -22,15 +22,16 @@
                 <div class="col-lg-7 px-2">
                     <h1 class="font-weight-bold">Data Warehouse</h1>
                     <h4>Login Terlebih Dahulu</h4>
-                    <form action="post">
+                    <form action="/login" method="post">
+                        @csrf
                         <div class="form-row mt-5">
                             <div class="col-lg-7">
-                                <input type="username" name="username" class="form-control rounded-pill" placeholder="username" required>
+                                <input type="username" name="username" class="form-control rounded-pill" placeholder="username" id="username" autofocus required>
                             </div>
                         </div>
                         <div class="form-row mb-3 mt-3">
                             <div class="col-lg-7">
-                                <input type="password" placeholder="*******" class="form-control rounded-pill" required>
+                                <input type="password" name="password" placeholder="*******" id="password" class="form-control rounded-pill" required>
                             </div>
                         </div>
                     </form>
