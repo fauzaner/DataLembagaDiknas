@@ -220,6 +220,13 @@
   margin-top: 30px;
 }
 
+.jumbotron2 {
+  background-color: #bbdfc8;
+  width: 97.5%;
+  height: 50%;
+  border-radius: 40px;
+  margin-top: 30px;
+}
 .text-dinas {
     color: #11101d;
     font-size: 20px;
@@ -243,6 +250,11 @@
 
 .Logo1 {
   width: 100px;
+  margin-bottom: 90px;
+  padding-bottom: 20px;
+}
+
+.peserta {
   margin-bottom: 90px;
   padding-bottom: 20px;
 }
@@ -379,6 +391,15 @@
   color: white;
   -webkit-box-shadow: 3px 3px 10px #b8b9be, 6px 6px 6px #414047;
   box-shadow: 3px 3px 10px #b8b9be, 6px 6px 6px #414047;
+}
+
+.data {
+  margin-top: 50px;
+}
+
+.table {
+  font-size: 12px;
+
 }
   
 @media (max-width: 420px) {
