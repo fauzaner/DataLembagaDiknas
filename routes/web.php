@@ -31,15 +31,11 @@ Route::get('/admin', function () {return view('admin'); });
 Route::get('/guru', function () { $guru = Guru::all();
     return view('daftar_guru',['guru'=>$guru]);
 });
-=======
 Route::get('/guru', function () { $guru = Guru::all(); return view('daftar_guru',['guru'=>$guru]); });
 //Login Routes
 Route::get('/login', [LoginController::class, 'login'])->username('login');
 Route::post('actionlogin', [LoginController::class, 'actionlogin'])->username('actionlogin');
 
-Route::get('sup-admin', [sup-adminController::class, 'sup-admin'])->username('sup-admin')->middleware('auth');
-Route::get('actionlogout', [LoginController::class, 'actionlogout'])->username('actionlogout')->middleware('auth');
-=======
-Route::get('/tk', function () { $tendik = Tendik::all(); return view('daftar_tendik',['tendik'=>$tendik]); });
->>>>>>> aa19a10e6b9e8380d382354777fc9bf0f1585771
->>>>>>> d450c262e4fd5173b0cc07a8155ab62dde6ec42f
+Route::get('/sup-admin', [sup-adminController::class, 'sup-admin'])->username('sup-admin')->middleware('auth');
+Route::get('/actionlogout', [LoginController::class, 'actionlogout'])->username('actionlogout')->middleware('auth');
+Route::get('/td', function () { $tendik = Tendik::all(); return view('daftar_tendik',['tendik'=>$tendik]); });
