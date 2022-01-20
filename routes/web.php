@@ -68,6 +68,4 @@ Route::get('/tk', function () { $tendik = Tendik::all(); return view('daftar_ten
 //Route::get('/sup-admin', [sup-adminController::class, 'sup-admin'])->username('sup-admin')->middleware('auth');
 //Route::get('/actionlogout', [LoginController::class, 'actionlogout'])->username('actionlogout')->middleware('auth');
 Route::get('/td', function () { $tendik = Tendik::all(); return view('daftar_tendik',['tendik'=>$tendik]); });
-Route::get('/sup-admin', [sup-adminController::class, 'sup-admin'])->username('sup-admin')->middleware('auth');
-Route::get('/actionlogout', [LoginController::class, 'actionlogout'])->username('actionlogout')->middleware('auth');
 Route::get('/td', function () { $tendik = Tendik::all(); return view('daftar_tendik',['tendik'=>$tendik]); });
