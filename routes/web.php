@@ -33,6 +33,7 @@ Route::post('/pd', function () { Excel::import(new PDImport, request()->file('fi
     Alert::success('Congrats', 'You\'ve Successfully Registered');
     return back(); });
 Route::get('/admin', function () {return view('admin'); });
+Route::get('/sup_admin', function () {return view('sup_admin'); });
 
 Route::get('/guru', function () { $guru = Guru::all(); return view('daftar_guru',['guru'=>$guru]); });
 
