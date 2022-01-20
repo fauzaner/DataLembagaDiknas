@@ -35,7 +35,7 @@
                             </div>
                         </div>
                     </form>
-                    <a type="button" class="btn1 text-center mr-5" href="#">Login</a>
+                    <a type="button" class="btn1 text-center mr-5" href="/admin">Login</a>
                 </div>
             </div>
         </div>
