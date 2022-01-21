@@ -10,7 +10,7 @@
     <div class="card">
       <div>
             <div class = "numbers">1,504</div>
-            <div class="cardName">Daily Views</div>
+            <div class="cardName">Jumlah Sekolah</div>
           </div>
           <div class="iconBx">
           <img src="images/eye.svg" width="50px" height="50px" alt="eye">
@@ -19,17 +19,7 @@
         <div class="card">
           <div>
             <div class = "numbers">1,504</div>
-            <div class="cardName">Daily Views</div>
-          </div>
-          <div class="iconBx">
-          <img src="images/eye.svg" width="50px" height="50px" alt="eye">
-          </div>
-        </div>
-
-        <div class="card">
-          <div>
-            <div class = "numbers">1,504</div>
-            <div class="cardName">Daily Views</div>
+            <div class="cardName">Jumlah Guru</div>
           </div>
           <div class="iconBx">
           <img src="images/eye.svg" width="50px" height="50px" alt="eye">
@@ -39,7 +29,17 @@
         <div class="card">
           <div>
             <div class = "numbers">1,504</div>
-            <div class="cardName">Daily Views</div>
+            <div class="cardName">Jumlah Tendik</div>
+          </div>
+          <div class="iconBx">
+          <img src="images/eye.svg" width="50px" height="50px" alt="eye">
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class = "numbers">1,504</div>
+            <div class="cardName">Jumlah Siswa</div>
           </div>
           <div class="iconBx">
             <img src="images/eye.svg" width="50px" height="50px" alt="eye">

@@ -1,4 +1,4 @@
-@extends('main')
+@extends('layouts.main')
 @section('content')
     <div class="data relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
             <div class="container">
@@ -17,9 +17,14 @@
                             <button class="btn btn-primary" type="submit" id="button-addon2">Import</button>
                         </div>
                     </form>
+<<<<<<< HEAD:resources/views/daftar_pd.blade.php
                     <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-hover table-bordered yajra-datatable" width="100%">
+=======
+                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                        <table class="table table-hover table-bordered yajra-datatable" width="100%" cellspacing="0">
+>>>>>>> f1913a50d1a9783c21d1d2b5deb7ca80d72c0720:resources/views/admin/daftar_pd.blade.php
                             <thead>
                                 <tr class="text-center">
                                     <th>No</th>
