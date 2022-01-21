@@ -1,4 +1,4 @@
-@extends('main')
+@extends('layouts.main')
 @section('content')
     <div class="data relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
             <div class="container">
@@ -17,7 +17,7 @@
                             <button class="btn btn-primary" type="submit" id="button-addon2">Import</button>
                         </div>
                     </form>
-                    <div class="table-responsive">
+                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
                         <table class="table table-hover table-bordered yajra-datatable" width="100%" cellspacing="0">
                             <thead>
                                 <tr class="text-center">

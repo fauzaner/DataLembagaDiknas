@@ -174,7 +174,6 @@
 
 .home-section{
   position: absolute;
-  background: #E4E9F7;
   min-height: 100vh;
   top: 0;
   left: 78px;
@@ -395,6 +394,7 @@
 
 .data {
   margin-top: 50px;
+  background-color: #FFF;
 }
 
 .table {

@@ -1,8 +1,8 @@
-@extends('main')
+@extends('layouts.main')
 @section('content')
 <div class="jumbotron p-4 mb-3">
   <div class="text-dinas container-fluid">
-    <img class="Logo" src="{{asset('assets/img/Logo.png')}}">
+    <img class="Logo img-fluid" src="{{asset('assets/img/Logo.png')}}">
       <h1 class="text-img display-8 fw-bold">Dinas Pendidikan Kabupaten Blitar <br> Selamat Datang</h1>
   </div>
 </div>
