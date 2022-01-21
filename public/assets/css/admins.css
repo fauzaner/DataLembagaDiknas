@@ -6,6 +6,12 @@
   box-sizing: border-box;
   font-family: "Poppins" , sans-serif;
 }
+
+div.dataTables_wrapper {
+  width: 1050px;
+  margin: 0 auto;
+}
+
 .sidebar{
   position: fixed;
   left: 0;
@@ -400,6 +406,10 @@
 .table {
   font-size: 12px;
 
+}
+
+.card-user {
+  margin-top: 50px;
 }
   
 @media (max-width: 420px) {

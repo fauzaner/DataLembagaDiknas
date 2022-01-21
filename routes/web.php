@@ -6,6 +6,7 @@ use Maatwebsite\Excel\Facades\Excel;
 use App\Models\PesertaDidik;
 use App\Models\Guru;
 use App\Models\Tendik;
+use App\Models\Users;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\AdminController;
 
@@ -27,17 +28,13 @@ Route::get('/pd', function () { $peserta_didik = PesertaDidik::all();return view
 Route::post('/pd', function () { Excel::import(new PDImport, request()->file('file'));
     Alert::success('Congrats', 'You\'ve Successfully Registered');
     return back(); });
-<<<<<<< HEAD
-=======
+Route::get('/user', function () {return view('sup_admin.tambah_user'); });
+Route::get('/user', function () { $users = Users::all();return view('sup_admin.tambah_user',['users'=>$users]);});
+
 Route::get('/admin', function () {return view('admin'); });
 Route::get('/sup_admin', function () {return view('sup_admin'); });
 
 Route::get('/guru', function () { $guru = Guru::all(); return view('daftar_guru',['guru'=>$guru]); });
-<<<<<<< HEAD
-=======
-
->>>>>>> 8d44928b215a27cc2cac1caec769f1a3dab2ab3f
->>>>>>> d9f57070f21b25401840ed70147d0c52a819e0e6
 
 //Login Routes
 Auth::routes(); 
