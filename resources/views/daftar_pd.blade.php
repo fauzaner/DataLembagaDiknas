@@ -4,11 +4,11 @@
             <div class="container">
                 <div class="row">
                     <div class="jumbotron2 p-4 mb-3">
-  <div class="text-peserta container-fluid">
-    <img class="peserta" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAbhJREFUaEPtWP8xRDEQ/q4TKkAHSqACVIBKUAEqQAc6QAV0wnwjmXnvJJfdbN7lMjYz99fLJvv92CR7Kww+VoPnDwfQW0FXwBUwMuAWMhJoDv+XCuwBuARwDOAwUPgO4BXAHYAvM62KBbQKnAO4L6x/AeBBkYNpqgaAJPmYzNZASAHQNp9Kqva3YScpgNvgew0G1sNVIuBbs0hi7ixnKYC3ScFK92dhH+0KgFrWUgTVrhW5qFKgdtOdAUA7HEi9E+Z9VNhOuQXEDU3LIlYnuSlAWsTDH6MkYeiLLKooASG9hZscDFILTW1IO/GC4mMuFjYLlo851or0MdcNQKsidABkUmOhs0kPEPuAdTV4X/D3DOCllVTWY/QEwA0Ael8zWAvXAYwmTjW3pAATT70oNZuwsAlkkbEJQM3tm0sy97Q2g8oBoG2ezKvPFzjN2El7Goleo+y+tJ4v4WVNsEtbH80BSG7bUrK57ykVmgPgPwo8MpcYj+FNNV27OYCa9lEKNtdmSuP/zFuiYyolUzq6S/Gz7w5ARdfv5MUVqMipX0hTNnrAcAA9WJ/u6Qq4AkYG3EJGAs3hwyvwA5caQjGwf/eeAAAAAElFTkSuQmCC"/>
-      <h1 class="text-admin display-8 fw-bold">Data Peserta Didik</h1>
-  </div>
-</div>
+                        <div class="text-peserta container-fluid">
+                            <img class="peserta" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAbhJREFUaEPtWP8xRDEQ/q4TKkAHSqACVIBKUAEqQAc6QAV0wnwjmXnvJJfdbN7lMjYz99fLJvv92CR7Kww+VoPnDwfQW0FXwBUwMuAWMhJoDv+XCuwBuARwDOAwUPgO4BXAHYAvM62KBbQKnAO4L6x/AeBBkYNpqgaAJPmYzNZASAHQNp9Kqva3YScpgNvgew0G1sNVIuBbs0hi7ixnKYC3ScFK92dhH+0KgFrWUgTVrhW5qFKgdtOdAUA7HEi9E+Z9VNhOuQXEDU3LIlYnuSlAWsTDH6MkYeiLLKooASG9hZscDFILTW1IO/GC4mMuFjYLlo851or0MdcNQKsidABkUmOhs0kPEPuAdTV4X/D3DOCllVTWY/QEwA0Ael8zWAvXAYwmTjW3pAATT70oNZuwsAlkkbEJQM3tm0sy97Q2g8oBoG2ezKvPFzjN2El7Goleo+y+tJ4v4WVNsEtbH80BSG7bUrK57ykVmgPgPwo8MpcYj+FNNV27OYCa9lEKNtdmSuP/zFuiYyolUzq6S/Gz7w5ARdfv5MUVqMipX0hTNnrAcAA9WJ/u6Qq4AkYG3EJGAs3hwyvwA5caQjGwf/eeAAAAAElFTkSuQmCC"/>
+                            <h1 class="text-admin display-8 fw-bold">Data Peserta Didik</h1>
+                        </div>
+                        </div>
                     <br><br>
                     <form action="/pd" method="post" enctype="multipart/form-data">
                         @csrf
@@ -17,8 +17,9 @@
                             <button class="btn btn-primary" type="submit" id="button-addon2">Import</button>
                         </div>
                     </form>
+                    <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-hover table-bordered yajra-datatable" width="100%" cellspacing="0">
+                        <table class="table table-hover table-bordered yajra-datatable" width="100%">
                             <thead>
                                 <tr class="text-center">
                                     <th>No</th>
@@ -168,5 +169,6 @@
                     </div>
                 </div>
             </div>
+        </div>
 </div>
 @endsection

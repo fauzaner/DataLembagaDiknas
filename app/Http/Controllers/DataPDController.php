@@ -4,19 +4,26 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\PesertaDidik;
-
+use Illuminate\Support\Facades\DB;
 class DataPDController extends Controller
 {
     public function index(){
 
-        $data_surat = DB::table('surat')
-        ->orderByRaw('created_at DESC')
+        $peserta_didik = DB::table('peserta_didik')
+        ->orderByRaw('nama_pd ASC')
         ->paginate(10);
 
         
-        return view('layouts/arsip', [
-            'title' => "Arsip",
-            'data_surat' => $data_surat
+        return view('daftar_pd', [
+            'title' => "Peserta Didik",
+            'peserta_didik' => $peserta_didik
         ]);
+    }
+
+    public function import(){
+        Excel::import(new PDImport,
+        request()->file('file'));
+        Alert::success('Congrats', 'Berhasil Menambahkan Data Peserta Didik');
+        return back();
     }
 }

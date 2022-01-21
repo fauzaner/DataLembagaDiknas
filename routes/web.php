@@ -26,12 +26,8 @@ Route::get('/', function () {return view('welcome'); });
 Route::get('/', function () {return view('sup_admin'); });
 Route::get('/form', function () { return view('form'); });
 Route::get('/upload', function () { return view('upload'); });
-Route::get('/pd', function () { $peserta_didik = PesertaDidik::all();
-    return view('daftar_pd',['peserta_didik'=>$peserta_didik]);
-});
-Route::post('/pd', function () { Excel::import(new PDImport, request()->file('file'));
-    Alert::success('Congrats', 'You\'ve Successfully Registered');
-    return back(); });
+Route::get('/pd', [App\Http\Controllers\DataPDController::class, 'index']);
+Route::post('/pd/import', [App\Http\Controllers\DataPDController::class, 'import']);
 Route::get('/admin', function () {return view('admin'); });
 
 Route::get('/guru', function () { $guru = Guru::all(); return view('daftar_guru',['guru'=>$guru]); });
@@ -41,9 +37,6 @@ Route::get('/guru', function () { $guru = Guru::all(); return view('daftar_guru'
 Auth::routes();
 
 Route::get('/login', [loginController::class, 'login']);
-Route::get('/login', [loginController::class, 'login']);
-
-
 
 Route::get('/tk', function () { $tendik = Tendik::all(); return view('daftar_tendik',['tendik'=>$tendik]); });
 Route::get('/guru', function () { $guru = Guru::all(); return view('daftar_guru',['guru'=>$guru]); });
