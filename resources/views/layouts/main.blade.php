@@ -46,7 +46,9 @@
   </div>
   <!--akhir sidebar-->
 <section class="home-section">
+  <div class="container">
     @yield('content')
+  </div>
 </section>
 
 

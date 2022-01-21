@@ -19,7 +19,7 @@ class CreateGuruTable extends Migration
             $table->string('jk',100)->nullable();
             $table->string('tmp_lhr',50)->nullable();
             $table->string('tgl_lhr')->nullable();
-            $table->string('nip',20)->unique();
+            $table->string('nip',20)->unique()->nullable();
             $table->string('status_kep',100)->nullable();
             $table->string('jenis_ptk',100)->nullable();
             $table->string('agama',100)->nullable();
