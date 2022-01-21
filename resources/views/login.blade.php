@@ -12,7 +12,7 @@
     <title>Login</title>
   </head>
   <body>
-    <center>  
+    <center>
     <section class="form my-4 mx-5">
         <div class="container">
             <div class="row no-gutters">
@@ -22,8 +22,14 @@
                 <div class="col-lg-7 px-2">
                     <h1 class="font-weight-bold">Data Warehouse</h1>
                     <h4>Login Terlebih Dahulu</h4>
-                    <form action="/login" method="post">
+                    <form action="/admin" method="post">
                         @csrf
+                        @if(session()->has('success'))
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            {{ session('success') }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        @endif
                         <div class="form-row mt-5">
                             <div class="col-lg-7">
                                 <input type="username" name="username" class="form-control rounded-pill" placeholder="username" id="username" autofocus required>
@@ -35,7 +41,7 @@
                             </div>
                         </div>
                     </form>
-                    <a type="button" class="btn1 text-center mr-5" href="/admin">Login</a>
+                    <a class="btn1 text-center mr-5" href="/admin" type="Submit">Login</a>
                 </div>
             </div>
         </div>

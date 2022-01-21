@@ -4,17 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Session;
 
-class loginController extends Controller
+class cobaController extends Controller
 {
-    public function test()
+    public function coba()
     {
-        return view ('test', [
+        return view('coba', [
+
         ]);
     }
 
-    public function authenticate(Requets $request)
+    public function authenticate(Request $request)
     {
         $credentials = $request->validate([
             'username' => 'required',
@@ -26,6 +26,8 @@ class loginController extends Controller
             return redirect()->intended('/admin');
         }
 
-        return back()->with('loginError', 'Login Failed!');
+        return back()->with('loginError', 'Login failed!');
+
+        dd('berhasil login!');
     }
 }
