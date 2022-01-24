@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\PesertaDidik;
 use Illuminate\Support\Facades\DB;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Imports\PDImport;
+
 class DataPDController extends Controller
 {
     public function index(){
@@ -14,7 +17,7 @@ class DataPDController extends Controller
         ->paginate(10);
 
         
-        return view('daftar_pd', [
+        return view('admin\daftar_pd', [
             'title' => "Peserta Didik",
             'peserta_didik' => $peserta_didik
         ]);
