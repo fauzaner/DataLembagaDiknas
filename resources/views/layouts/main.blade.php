@@ -22,7 +22,7 @@
          <span class="tooltip">Search</span>
       </li>
       <li>
-        <a href="{{url('/')}}">
+        <a href="{{url('admin')}}">
           <i class='bx bx-grid-alt'></i>
           <span class="links_name">Dashboard</span>
         </a>
@@ -46,7 +46,9 @@
   </div>
   <!--akhir sidebar-->
 <section class="home-section">
+  <div class="container">
     @yield('content')
+  </div>
 </section>
 
 
