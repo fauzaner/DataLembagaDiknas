@@ -11,12 +11,29 @@
                         </div>
                     <br><br>
                     <form action="/pd/import" method="post" enctype="multipart/form-data">
+                    <form action="/pd" method="post" enctype="multipart/form-data">
+
                         @csrf
                         <div class="input-group mb-3">
                             <input type="file" name="file" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
                             <button class="btn btn-primary" type="submit" id="button-addon2">Import</button>
                         </div>
                     </form>
+                    <div class="container">
+        <div class="card-user shadow mb-4">
+            <div class="card-header py-3">
+                <div class="col-md-12">
+                <h3 class="m-0 font-weight-bold" style="color: 	#8B0000;">Data Peserta Didik 
+                <button style="float: right; font-weight: 600; background: 	#3CB371; color: white;" class="btn " type="button" data-toggle="modal" data-target="#CreateArticleModal">
+                    Import
+                </button>
+                </h6>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table id="pesertadidik" class="display nowrap" style="width:100%">
+
                     <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-hover table-bordered yajra-datatable" width="100%">
@@ -173,4 +190,16 @@
             </div>
         </div>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('#pesertadidik').DataTable( {
+            "scrollY": 200,
+            "scrollX": true
+        } );
+    } );
+</script>
 @endsection

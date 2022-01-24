@@ -7,6 +7,11 @@
   font-family: "Poppins" , sans-serif;
 }
 
+div.dataTables_wrapper {
+  width: 1050px;
+  margin: 0 auto;
+}
+
 .body{
   background-color: #E4E9F7;
   position: absolute;
@@ -412,6 +417,10 @@
 .table {
   font-size: 12px;
 
+}
+
+.card-user {
+  margin-top: 50px;
 }
   
 @media (max-width: 420px) {
