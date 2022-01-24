@@ -1,17 +1,24 @@
 @extends('layouts.main')
 @section('content')
+    <div class="data relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
+                    <form action="/pesdik/export" method="post" enctype="multipart/form-data">
+                    <form action="/pesdik" method="post" enctype="multipart/form-data">
+                        @csrf
+                    </form>
+                    <div class="container">
         <div class="card-user shadow mb-4">
             <div class="card-header py-3">
                 <div class="col-md-12">
                 <h1 class="m-0 font-weight-bold" style="color: 	#8B0000;">Data Peserta Didik</h1>
-                <button style="float: right; font-weight: 600; background: 	#3CB371; color: white;" class="btn " type="button" data-toggle="modal" data-target="#CreateArticleModal">
-                    Import
-                </button>
+                <a href="/pesdik/export" class="btn btn-success my-3" target="_blank">Export</a>
             </div>
         </div>
         <div class="card-body">
-            <div class="table-responsive nowrap">
-                    <table class="table table-hover table-bordered yajra-datatable " width="100%">
+            <div class="table-responsive">
+                <table id="pesertadidik" class="display nowrap" style="width:100%">
+                    <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-bordered yajra-datatable" width="100%">
                     <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
                         <table class="table table-hover table-bordered yajra-datatable" width="100%" cellspacing="0">
                             <thead>
@@ -165,16 +172,4 @@
             </div>
         </div>
 </div>
-
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
-
-<script>
-    $(document).ready(function() {
-        $('#pesertadidik').DataTable( {
-            "scrollY": 200,
-            "scrollX": true
-        } );
-    } );
-</script>
 @endsection
