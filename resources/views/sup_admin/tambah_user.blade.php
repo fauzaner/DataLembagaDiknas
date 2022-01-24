@@ -5,9 +5,7 @@
         <div class="card-header py-3">
             <div class="col-md-12">
                 <h3 class="m-0 font-weight-bold" style="color: 	#8B0000;">Data User 
-                <button style="float: right; font-weight: 600; background: 	#3CB371; color: white;" class="btn " type="button" data-toggle="modal" data-target="#CreateArticleModal">
-                    Tambah User
-                </button>
+                <button style="float: right; font-weight: 600; background: 	#3CB371; color: white;" type="button" class="btn btn-success float-right mb-1" data-toggle="modal" data-target="#ModalTambahUser">Tambah User</button>
                 </h6>
             </div>
         </div>
@@ -20,7 +18,7 @@
                             <th>Name</th>
                             <th>Username</th>
                             <th>Password</th>
-                            <th>is_admin</th>
+                            <th>Admin</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -35,7 +33,7 @@
                             <td>{{ $users->username }}</td>
                             <td>{{ $users->password }}</td>
                             <td>{{ $users->is_admin }}</td>
-                            <td><button type="button" class="btn btn-danger">Hapus</button></td>
+                            <td><button class="btn btn-danger" data-toggle="modal" data-target="#modalHapusUser">Delete</button></td>
                         </tr>
                         @empty
                         <td colspan="4" class="table-active text-center">Tidak Ada Data</td>
@@ -47,44 +45,29 @@
     </div>
 </div>
 <!-- Create Article Modal -->
-<div class="modal" id="CreateArticleModal">
+<div class="modal" id="ModalTambahUser" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
-            <!-- Modal Header -->
             <div class="modal-header">
-                <h4 class="modal-title">Tambah User</h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h5 class="modal-title">Tambah User</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
-            <!-- Modal body -->
             <div class="modal-body">
-                <div class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none;">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="alert alert-success alert-dismissible fade show" role="alert" style="display: none;">
-                    <strong>Success!</strong>Successfully.
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+            <!--FORM TAMBAH BARANG-->
+            <form action="" method=" ">
+                <div class="form-group">
+                    <label for="">Nama Barang</label>
+                    <input type="text" class="form-control" id="addNamaBarang" name="addNamaBarang" aria-describedby="emailHelp">
                 </div>
                 <div class="form-group">
-                    <label for="title">Nama :</label>
-                    <input type="text" class="form-control" name="nama" id="nama">
+                    <label for="">Jumlah Barang</label>
+                    <input type="text" class="form-control" id="addJumlahBarang" name="addJumlahBarang">
                 </div>
-                <div class="form-group">
-                    <label for="title">Username :</label>
-                    <input type="text" class="form-control" name="username" id="username">
-                </div>
-                <div class="form-group">
-                    <label for="title">Password :</label>
-                    <input type="password" class="form-control" name="password" id="password">
-                </div>
-            </div>
-            <!-- Modal footer -->
-            <div class="modal-footer">
-                <button type="button" class="btn btn-success" id="SubmitCreateArticleForm">Create</button>
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Simpan Data</button>
+            </form>
+            <!--END FORM TAMBAH BARANG-->
             </div>
         </div>
     </div>
