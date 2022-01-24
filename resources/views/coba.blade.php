@@ -37,22 +37,12 @@
                           <h1 class="h3 mb-4 fw-bold text-center">Data Warehouse</h1>
                       
                           <div class="form-floating">
-                            <input type="username" class="form-control @error('username') is-invalid @enderror" name="username" id="username" placeholder="Username" autofocus required>
+                            <input type="username" name="username" class="form-control"  id="username" placeholder="Username" autofocus required>
                             <label for="username">Username</label>
-                            @error('username')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                            @enderror
                           </div>
                           <div class="form-floating">
-                            <input type="password" name="password" class="form-control @error('username') is-invalid @enderror" id="password" placeholder="Password" required>
-                            <label for="floatingPassword">Password</label>
-                            @error('username')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                            @enderror
+                            <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
+                            <label for="password">Password</label>
                           </div>
                           <button class="w-100 btn btn-lg btn-primary rounded-pill" type="submit">Login</button>
                           <p class="mt-5 mb-3 text-muted text-center">&copy; Sungram Disdik</p>

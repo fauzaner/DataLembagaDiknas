@@ -7,9 +7,9 @@ use App\Models\PesertaDidik;
 use App\Models\Guru;
 use App\Models\Tendik;
 use App\Models\User;
-use App\Http\Controllers\loginController;
-use App\Http\Controllers\AdminController;
+use App\Http\Controllers\adminController;
 use App\Http\Controllers\cobaController;
+use App\Http\Controllers\LoginController;
 
 
 /*
@@ -40,10 +40,8 @@ Route::get('/guru', function () { $guru = Guru::all(); return view('daftar_guru'
 //Login Routes
 Auth::routes(); 
 
-Route::get('/', [loginController::class, 'login'])->name('login')->middleware('guest');
-Route::post('/', [loginController::class, 'authenticate']);
 
-Route::get('/admin', [AdminController::class, 'admin'])->middleware('auth');
+Route::get('/admin', [adminController::class, 'admin'])->middleware('auth');
 
 Route::get('/tk', function () { $tendik = Tendik::all(); return view('daftar_tendik',['tendik'=>$tendik]); });
 Route::get('/guru', function () { $guru = Guru::all(); return view('daftar_guru',['guru'=>$guru]); });
@@ -74,3 +72,6 @@ Route::get('/td', function () { $tendik = Tendik::all(); return view('daftar_ten
 
 Route::get('/coba', [cobaController::class, 'coba']);
 Route::post('/coba', [cobaController::class, 'authenticate']);
+
+Route::get('/login', [LoginController::class, 'login']);
+Route::post('/login', [LoginController::class, 'authenticate']);

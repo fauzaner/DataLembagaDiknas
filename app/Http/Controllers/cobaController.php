@@ -10,7 +10,8 @@ class cobaController extends Controller
     public function coba()
     {
         return view('coba', [
-
+            'title' => 'coba',
+            'active' => 'coba'
         ]);
     }
 
@@ -23,11 +24,9 @@ class cobaController extends Controller
 
         if(Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended('/admin');
+            return redirect()->intended('/lembaga');
         }
 
         return back()->with('loginError', 'Login failed!');
-
-        dd('berhasil login!');
     }
 }
