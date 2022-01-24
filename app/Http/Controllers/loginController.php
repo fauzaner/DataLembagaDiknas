@@ -19,15 +19,6 @@ class LoginController extends Controller
             'password' => 'required'
         ]);
 
-<<<<<<< HEAD
         dd('berhasil login');
-=======
-        if(Auth::attempt($credentials)) {
-            $request->session()->regenerate();
-            return redirect()->intended('/admin');
-        }
-
-        return back()->with('loginError', 'Login Failed!');
->>>>>>> faaf645b0a82765e06baa19fc2e942f58f5245bd
     }
 }

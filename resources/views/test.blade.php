@@ -15,21 +15,15 @@
   </head>
   <body>
   <div class="cardBox">
-              <div class="row justify-content-center">
-                  <div class="col-md-4 mt-4">
-              @if(session()->has('success'))
-              <div class="alert alert-success alert-dismissible fade show" role="alert">
-                  {{ session('success') }}
-                  <button class="button" class="btn-close" data-bs-dismiss="alert">
-
-                  </button>
-              </div>
-              @endif
-
               <main class="form-signin">
               <img class="logo-data mb-4" src="https://img.icons8.com/cotton/50/000000/doughnut-chart.png" width="50"/>
     <h1 class="h3 mb-4 fw-bold text-center">Data Warehouse</h1>
-  <form action="{{ route('login') }}" method="post">
+    @if(session('error'))
+            <div class="alert alert-danger">
+                <b>Opps!</b> {{session('error')}}
+            </div>
+            @endif
+  <form action="/test" method="post">
       @csrf
     <div class="form-floating">
       <input type="username" name="username" class="form-control" id="username" placeholder="Masukkan Username" autofocus required>
