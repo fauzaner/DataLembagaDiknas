@@ -1,25 +1,5 @@
 @extends('layouts.main')
 @section('content')
-    <div class="data relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
-            <div class="container-fluid" style="margin-top: 0 !important;">
-                <div class="row">
-                    <div class="jumbotron2 p-4 mb-3">
-                        <div class="text-peserta container-fluid">
-                            <img class="peserta" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAbhJREFUaEPtWP8xRDEQ/q4TKkAHSqACVIBKUAEqQAc6QAV0wnwjmXnvJJfdbN7lMjYz99fLJvv92CR7Kww+VoPnDwfQW0FXwBUwMuAWMhJoDv+XCuwBuARwDOAwUPgO4BXAHYAvM62KBbQKnAO4L6x/AeBBkYNpqgaAJPmYzNZASAHQNp9Kqva3YScpgNvgew0G1sNVIuBbs0hi7ixnKYC3ScFK92dhH+0KgFrWUgTVrhW5qFKgdtOdAUA7HEi9E+Z9VNhOuQXEDU3LIlYnuSlAWsTDH6MkYeiLLKooASG9hZscDFILTW1IO/GC4mMuFjYLlo851or0MdcNQKsidABkUmOhs0kPEPuAdTV4X/D3DOCllVTWY/QEwA0Ael8zWAvXAYwmTjW3pAATT70oNZuwsAlkkbEJQM3tm0sy97Q2g8oBoG2ezKvPFzjN2El7Goleo+y+tJ4v4WVNsEtbH80BSG7bUrK57ykVmgPgPwo8MpcYj+FNNV27OYCa9lEKNtdmSuP/zFuiYyolUzq6S/Gz7w5ARdfv5MUVqMipX0hTNnrAcAA9WJ/u6Qq4AkYG3EJGAs3hwyvwA5caQjGwf/eeAAAAAElFTkSuQmCC"/>
-                            <h1 class="text-admin display-8 fw-bold">Data Peserta Didik</h1>
-                        </div>
-                        </div>
-                    <br><br>
-                    <form action="/pd/import" method="post" enctype="multipart/form-data">
-                    <form action="/pd" method="post" enctype="multipart/form-data">
-
-                        @csrf
-                        <div class="input-group mb-3">
-                            <input type="file" name="file" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-                            <button class="btn btn-primary" type="submit" id="button-addon2">Import</button>
-                        </div>
-                    </form>
-                    <div class="container">
         <div class="card-user shadow mb-4">
             <div class="card-header py-3">
                 <div class="col-md-12">
@@ -30,12 +10,8 @@
             </div>
         </div>
         <div class="card-body">
-            <div class="table-responsive">
-                <table id="pesertadidik" class="display nowrap" style="width:100%">
-
-                    <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-hover table-bordered yajra-datatable" width="100%">
+            <div class="table-responsive nowrap">
+                    <table class="table table-hover table-bordered yajra-datatable " width="100%">
                     <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
                         <table class="table table-hover table-bordered yajra-datatable" width="100%" cellspacing="0">
                             <thead>

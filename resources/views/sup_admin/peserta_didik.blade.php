@@ -1,16 +1,15 @@
 @extends('layouts.main')
 @section('content')
-    <div class="data relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
+    <div class="data-pesdik relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
                     <form action="/pesdik/export" method="post" enctype="multipart/form-data">
                     <form action="/pesdik" method="post" enctype="multipart/form-data">
                         @csrf
                     </form>
-                    <div class="container">
         <div class="card-user shadow mb-4">
             <div class="card-header py-3">
-                <div class="col-md-12">
-                <h1 class="m-0 font-weight-bold" style="color: 	#8B0000;">Data Peserta Didik</h1>
-                <a href="/pesdik/export" class="btn btn-success my-3" target="_blank">Export</a>
+            <div class="row">
+                <h1 class="font-weight-bold col-md-9" style="color: #8B0000; font-size: 30px;">Data Peserta Didik</h1>
+                <a href="/pesdik/export" class="btn  buttonex btn-success col-md-2 mb-2 " target="_blank">Export</a>
             </div>
         </div>
         <div class="card-body">
@@ -169,6 +168,7 @@
                         </table>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
 </div>
