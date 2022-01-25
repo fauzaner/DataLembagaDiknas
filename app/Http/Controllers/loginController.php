@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class LoginController extends Controller
 {
@@ -19,15 +20,13 @@ class LoginController extends Controller
             'password' => 'required'
         ]);
 
-<<<<<<< HEAD
-        dd('berhasil login');
-=======
+        $credentials = $request->only('username', 'password');
+
         if(Auth::attempt($credentials)) {
             $request->session()->regenerate();
             return redirect()->intended('/admin');
         }
 
-        return back()->with('loginError', 'Login Failed!');
->>>>>>> faaf645b0a82765e06baa19fc2e942f58f5245bd
+        return back()->with('loginError', 'Email atau Password salah!!');
     }
 }
