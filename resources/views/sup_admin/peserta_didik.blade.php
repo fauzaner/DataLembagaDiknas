@@ -1,37 +1,24 @@
 @extends('layouts.main')
 @section('content')
-<<<<<<< HEAD
-
-    <div class="container overflow-x-scroll">
+    <div class="data-pesdik relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
+                    <form action="/pesdik/export" method="post" enctype="multipart/form-data">
+                    <form action="/pesdik" method="post" enctype="multipart/form-data">
+                        @csrf
+                    </form>
         <div class="card-user shadow mb-4">
             <div class="card-header py-3">
-                <div class="col-md-12">
-                    <h3 class="m-0 font-weight-bold" style="color: 	#8B0000;">Data Peserta Didik 
-                    <button style="float: right; font-weight: 600; background: 	#3CB371; color: white;" class="btn " type="button" data-toggle="modal" data-target="#CreateArticleModal">
-                        Import
-                    </button>
-                    </h3>
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="table-responsive">
-                <table style="color: #708090;" class="table table-bordered table-striped yajra-datatable" id="data_users_side" width="100%" cellspacing="0">
-                    
-=======
-        <div class="card-user shadow mb-4">
-            <div class="card-header py-3">
-                <div class="col-md-12">
-                <h1 class="m-0 font-weight-bold" style="color: 	#8B0000;">Data Peserta Didik</h1>
-                <button style="float: right; font-weight: 600; background: 	#3CB371; color: white;" class="btn " type="button" data-toggle="modal" data-target="#CreateArticleModal">
-                    Import
-                </button>
+            <div class="row">
+                <h1 class="font-weight-bold col-md-9" style="color: #8B0000; font-size: 30px;">Data Peserta Didik</h1>
+                <a href="/pesdik/export" class="btn  buttonex btn-success col-md-2 mb-2 " target="_blank">Export</a>
             </div>
         </div>
         <div class="card-body">
-            <div class="table-responsive nowrap">
-                    <table class="table table-hover table-bordered yajra-datatable " width="100%">
+            <div class="table-responsive">
+                <table id="pesertadidik" class="display nowrap" style="width:100%">
+                    <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-bordered yajra-datatable" width="100%">
                     <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
->>>>>>> c11f458e2c323858b1599524c1acf0d90130bf18
                         <table class="table table-hover table-bordered yajra-datatable" width="100%" cellspacing="0">
                             <thead>
                                 <tr class="text-center">
@@ -181,12 +168,8 @@
                         </table>
                     </div>
                 </div>
-                
             </div>
-           
+            </div>
         </div>
 </div>
-
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
 @endsection

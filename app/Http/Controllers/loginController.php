@@ -15,18 +15,24 @@ class LoginController extends Controller
 
     public function authenticate(Request $request)
     {
-        $request->validate([
+        $credentials = $request->validate([
             'username' => 'required',
             'password' => 'required'
         ]);
 
+<<<<<<< HEAD
         $credentials = $request->only('username', 'password');
 
+=======
+>>>>>>> c11f458e2c323858b1599524c1acf0d90130bf18
         if(Auth::attempt($credentials)) {
             $request->session()->regenerate();
             return redirect()->intended('/admin');
         }
 
+<<<<<<< HEAD
         return back()->with('loginError', 'Email atau Password salah!!');
+=======
+>>>>>>> c11f458e2c323858b1599524c1acf0d90130bf18
     }
 }

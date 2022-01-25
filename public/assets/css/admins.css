@@ -422,7 +422,7 @@ div.dataTables_wrapper {
 .card-user {
   margin-top: 50px;
 }
-  
+
 @media (max-width: 420px) {
   .sidebar li .tooltip{
     display: none;

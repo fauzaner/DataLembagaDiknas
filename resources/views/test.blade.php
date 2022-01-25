@@ -15,43 +15,23 @@
   </head>
   <body>
   <div class="cardBox">
-              <div class="row justify-content-center">
-                  <div class="col-md-4 mt-4">
-              @if(session()->has('success'))
-              <div class="alert alert-success alert-dismissible fade show" role="alert">
-                  {{ session('success') }}
-                  <button class="button" class="btn-close" data-bs-dismiss="alert">
-
-                  </button>
-              </div>
-              @endif
-
               <main class="form-signin">
               <img class="logo-data mb-4" src="https://img.icons8.com/cotton/50/000000/doughnut-chart.png" width="50"/>
     <h1 class="h3 mb-4 fw-bold text-center">Data Warehouse</h1>
-<<<<<<< HEAD
-  <form action="{{ url('login') }}" method="POST">
-=======
-  <form action="{{ route('login') }}" method="post">
->>>>>>> c11f458e2c323858b1599524c1acf0d90130bf18
+    @if(session('error'))
+            <div class="alert alert-danger">
+                <b>Opps!</b> {{session('error')}}
+            </div>
+            @endif
+  <form action="/test" method="post">
       @csrf
     <div class="form-floating">
-      <label for="username">Username</label>
       <input type="username" name="username" class="form-control" id="username" placeholder="Masukkan Username" autofocus required>
-      @error('password')
-        <span class="invalid-feedback" role="alert">
-          <strong>{{ $message }}</strong>
-        </span>
-      @enderror
+      <label for="username">Username</label>
     </div>
     <div class="form-floating">
-      <label for="password">Password</label>
       <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
-      @error('password')
-        <span class="invalid-feedback" role="alert">
-          <strong>{{ $message }}</strong>
-        </span>
-      @enderror
+      <label for="password">Password</label>
     </div>
     <button class="w-100 btn btn-lg btn-primary rounded-pill" type="submit">Login</button>
     <p class="mt-5 mb-3 text-muted text-center">&copy; Sungram Disdik</p>
@@ -59,7 +39,16 @@
 </main>
           </div>
       </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
   </body>
 </html>
