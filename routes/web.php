@@ -12,7 +12,6 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\TestController;
 use App\Http\Conttollers\dashboardController;
-use App\Http\Controllers\TestController;
 use App\Http\Controllers\DataPDController;
 use App\Http\Controllers\ProfilControlle;
 
@@ -48,7 +47,6 @@ Route::get('/pesdik/export', [App\Http\Controllers\PesertaDidikController::class
 
 Route::get('/user', [App\Http\Controllers\UserController::class, 'user']);
 
-=======
 Route::get('/pd', function () { $peserta_didik = PesertaDidik::all();
     return view('daftar_pd',['peserta_didik'=>$peserta_didik]);
 });
