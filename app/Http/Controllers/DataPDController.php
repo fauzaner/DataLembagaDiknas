@@ -13,14 +13,18 @@ class DataPDController extends Controller
 {
     public function index(){
 
+<<<<<<< HEAD
         $peserta_didik = DB::table('peserta_didik')
         ->orderByRaw('nama_pd ASC')
         ->paginate(5);
+=======
+        $peserta_didik = PesertaDidik::orderBy('nama_pd')->paginate(10);
+>>>>>>> 5a51b13648b2c535f61ed746bb288cc9e702dbbe
 
-        
         return view('admin\daftar_pd', [
             'title' => "Peserta Didik",
-            'peserta_didik' => $peserta_didik
+            compact('peserta_didik')
+
         ]);
     }
 
