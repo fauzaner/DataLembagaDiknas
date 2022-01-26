@@ -1,19 +1,17 @@
 @extends('layouts.main')
 @section('content')
-        <div class="card-user shadow mb-4">
-            <div class="card-header py-3">
-                <div class="col-md-12">
-                <h1 class="m-0 font-weight-bold" style="color: 	#8B0000;">Data Peserta Didik</h1>
-                <button style="float: right; font-weight: 600; background: 	#3CB371; color: white;" class="btn " type="button" data-toggle="modal" data-target="#CreateArticleModal">
-                    Import
-                </button>
-            </div>
-        </div>
+<div class="data-pesdik relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
+<div class="row">
+                    <form action="/pd" method="post" enctype="multipart/form-data">
+                        @csrf
+                        <div class="input-group mb-3">
+                            <input type="file" name="file" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <button class="btn btn-primary" type="submit" id="button-addon2">Import</button>
+                        </div>
+                    </form>
         <div class="card-body">
             <div class="table-responsive nowrap">
-                    <table class="table table-hover table-bordered yajra-datatable " width="100%">
-                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
-                        <table class="table table-hover table-bordered yajra-datatable" width="100%" cellspacing="0">
+                <table style="color: #708090;" class="table table-bordered table-striped yajra-datatable" id="data_users_side" width="100%" cellspacing="0">    
                             <thead>
                                 <tr class="text-center">
                                     <th>No</th>
@@ -160,21 +158,14 @@
                                 @endforelse
                             </tbody>
                         </table>
+                        Halaman : {{ $peserta_didik->currentPage() }} <br/>
+                        Jumlah Peserta Didik : {{ $peserta_didik->total() }} <br/>
+                    
+                        {{ $peserta_didik->links() }}
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 </div>
-
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
-
-<script>
-    $(document).ready(function() {
-        $('#pesertadidik').DataTable( {
-            "scrollY": 200,
-            "scrollX": true
-        } );
-    } );
-</script>
 @endsection

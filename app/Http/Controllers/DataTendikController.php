@@ -3,29 +3,28 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\PesertaDidik;
+use App\Models\Tendik;
 use Illuminate\Support\Facades\DB;
 use Maatwebsite\Excel\Facades\Excel;
-use App\Imports\PDImport;
-use Alert;
+use App\Imports\TendikImport;
 
-class DataPDController extends Controller
+class DataTendikController extends Controller
 {
     public function index(){
 
-        $peserta_didik = DB::table('peserta_didik')
-        ->orderByRaw('nama_pd ASC')
+        $tendik = DB::table('tendik')
+        ->orderByRaw('nama_tk ASC')
         ->paginate(5);
 
         
-        return view('admin\daftar_pd', [
-            'title' => "Peserta Didik",
-            'peserta_didik' => $peserta_didik
+        return view('admin\daftar_tendik', [
+            'title' => "Tenaga Kependidikan",
+            'tendik' => $tendik
         ]);
     }
 
     public function import(){
-        Excel::import(new PDImport,
+        Excel::import(new TendikImport,
         request()->file('file'));
         Alert::success('Congrats', 'Berhasil Menambahkan Data Peserta Didik');
         return back();
