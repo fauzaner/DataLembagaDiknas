@@ -37,4 +37,24 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    public function login(Request $request)
+    {
+        $input = $request->all();
+        $this->validate($request, [
+            'username' => 'required',
+            'password' => 'required',
+        ]);
+        if(auth()->attempt(array('username' => $input['username'], 'password' => $input['password'])))
+        {
+            if (auth()->user()->is_admin == 1) {
+                return redirect()->route('dashboard_admin');
+            }else{
+                return redirect()->route('home');
+            }
+        }else{
+            return redirect()->route('login')
+                ->with('error','Username atau password salah!!');
+        }
+    }
 }

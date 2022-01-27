@@ -26,7 +26,7 @@ use App\Http\Controllers\ProfilControlle;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/sup_admin', function () {return view('sup_admin'); });
+Route::get('/sup_admin', function () {return view('sup_admin'); })->name('dashboard_admin');
 Route::get('/form', function () { return view('form'); });
 Route::get('/upload', function () { return view('upload'); });
 Route::get('/pd', [App\Http\Controllers\DataPDController::class, 'index'])->name('daftar_pd');
@@ -34,37 +34,21 @@ Route::post('/pd/import', [App\Http\Controllers\DataPDController::class, 'import
 Route::get('/profil', [App\Http\Controllers\ProfilController::class, 'index'])->name('daftar_profil');
 Route::post('/profil/import', [App\Http\Controllers\ProfilController::class, 'import']);
 Route::get('/admin', function () {return view('admin'); });
-Route::get('/sup_admin', function () {return view('sup_admin'); });
-Route::get('/guru', function () { $guru = Guru::all(); return view('daftar_guru',['guru'=>$guru]); });
 
-
-Route::get('/coba', function () {return view('coba'); });
 Route::get('/user', [App\Http\Controllers\UserController::class, 'user']);
 
-Route::get('/coba', function () {return view('coba'); });
 Route::get('/pesdik', [App\Http\Controllers\PesertaDidikController::class, 'index']);
 Route::get('/pesdik/export', [App\Http\Controllers\PesertaDidikController::class, 'export']);
 
-Route::get('/user', [App\Http\Controllers\UserController::class, 'user']);
-
-Route::get('/pd', function () { $peserta_didik = PesertaDidik::all();
-    return view('daftar_pd',['peserta_didik'=>$peserta_didik]);
-});
-Route::get('/coba', function () {return view('coba'); });
-
-
-
+Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
 
 Route::get('/pd', [App\Http\Controllers\DataPDController::class, 'index']);
 Route::post('/pd/import', [App\Http\Controllers\DataPDController::class, 'import']);
-Route::get('/pesdik', [App\Http\Controllers\PesertaDidikController::class, 'index']);
-Route::get('/pesdik/export', [App\Http\Controllers\PesertaDidikController::class, 'export']);
 
 Route::get('/user', function () {return view('sup_admin.tambah_user'); });
 Route::get('/user', function () { $users = Users::all();return view('sup_admin.tambah_user',['users'=>$users]);});
 Route::get('/admin', function () {return view('admin'); });
 Route::get('/user', [App\Http\Controllers\UserController::class, 'user']);
-Route::get('/sup_admin', function () {return view('sup_admin'); });
 
 Auth::routes();
 
@@ -87,7 +71,5 @@ Route::post('/login', [LoginController::class, 'authenticate']);
 
 Route::get('/test', [TestController::class, 'test'])->name('test');
 Route::post('actionlogin', [TestController::class, 'actionlogin'])->name('actionlogin');
-
-Route::get('dashboard', [dashboardController::class, 'dashboard'])->name('dashboard')->middleware('auth');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
