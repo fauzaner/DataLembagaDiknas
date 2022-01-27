@@ -2,10 +2,10 @@
 
 namespace App\Imports;
 
-use App\Models\Guru;
+use App\Models\Tendik;
 use Maatwebsite\Excel\Concerns\ToModel;
 
-class GuruImport implements ToModel, WithStartRow
+class TendikImport implements ToModel, WithStartRow
 {
     /**
     * @param array $row
@@ -14,7 +14,7 @@ class GuruImport implements ToModel, WithStartRow
     */
     public function model(array $row)
     {
-        return new Guru([
+        return new Tendik([
             //
         ]);
     }

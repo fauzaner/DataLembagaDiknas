@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('content')
-    <div class="data-pesdik relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
+<div class="data-pesdik relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
                     <form action="/pesdik/export" method="post" enctype="multipart/form-data">
                     <form action="/pesdik" method="post" enctype="multipart/form-data">
                         @csrf
@@ -14,14 +14,10 @@
         </div>
         <div class="card-body">
             <div class="table-responsive">
-                <table id="pesertadidik" class="display nowrap" style="width:100%">
-                    <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-hover table-bordered yajra-datatable" width="100%">
-                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
-                        <table class="table table-hover table-bordered yajra-datatable" width="100%" cellspacing="0">
+                <table style="color: #708090;" class="table table-bordered table-striped table-hover" width="100%" cellspacing="0">
+                
                             <thead>
-                                <tr class="text-center">
+                                <tr class="text-center d-flex">
                                     <th>No</th>
                                     <th>Nama</th>
                                     <th>NIPD</th>
@@ -94,8 +90,8 @@
                                 $no = 0;
                                 @endphp
                                 @forelse ($peserta_didik as $pd)
-                                <tr>
-                                    <th scope="row">{{ ++$no }}</th>
+                                <tr class="d-flex">
+                                    <td>{{ ++$no }}</th>
                                     <td>{{ $pd->nama_pd }}</td>
                                     <td>{{ $pd->nipd }}</td>
                                     <td>{{ $pd->jenis_kelamin }}</td>
@@ -166,6 +162,10 @@
                                 @endforelse
                             </tbody>
                         </table>
+                        Halaman : {{ $peserta_didik->currentPage() }} <br/>
+                        Jumlah Peserta Didik : {{ $peserta_didik->total() }} <br/>
+                    
+                        {{ $peserta_didik->links() }}
                     </div>
                 </div>
             </div>
