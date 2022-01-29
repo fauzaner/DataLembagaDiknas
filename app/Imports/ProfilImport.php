@@ -4,8 +4,10 @@ namespace App\Imports;
 
 use App\Models\Profil;
 use Maatwebsite\Excel\Concerns\ToModel;
+use Maatwebsite\Excel\Concerns\WithStartRow;
+use Maatwebsite\Excel\Concerns\WithStartColumn;
 
-class ProfilImport implements ToModel
+class ProfilImport implements ToModel, WithStartRow, WithStartColumn
 {
     /**
     * @param array $column
@@ -14,19 +16,12 @@ class ProfilImport implements ToModel
     */
     public function model(array $column)
     {
-        if ($column[69] == "✓"){
-            $ada_pemerintah = 1;
-        }else{
-            $ada_pemerintah = 0;
-        }
-
         return new Profil([
             'nama_sekolah' => $column[3],
             'npsn' => $column[4],
             'jenjang_pend' => $column[5],
             'status' => $column[6],
             'alamat'=> $column[7],
-            'ada_pemerintah'=> $ada_pemerintah,
         ]);
     }
 

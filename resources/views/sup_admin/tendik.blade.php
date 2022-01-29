@@ -1,18 +1,21 @@
 @extends('layouts.main')
 @section('content')
-<div class="relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
-            <div class="container">
-                <div class="row">
-                    <form action="/td" method="post" enctype="multipart/form-data">
+    <div class="data-pesdik relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
+                    <form action="/tendik/export" method="post" enctype="multipart/form-data">
+                    <form action="/tendik" method="post" enctype="multipart/form-data">
                         @csrf
-                        <div class="input-group mb-3">
-                            <input type="file" name="file" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-                            <button class="btn btn-primary" type="submit" id="button-addon2">Import</button>
-                        </div>
                     </form>
-                    <div class="table-responsive">
-                        <table class="table table-striped table-hover table-bordered">
-                            <thead>
+        <div class="card-user shadow mb-4">
+            <div class="card-header py-3">
+            <div class="row">
+                <h1 class="font-weight-bold col-md-9" style="color: #8B0000; font-size: 30px;">Data Tenaga Kependidikan</h1>
+                <a href="/tendik/export" class="btn  buttonex btn-success col-md-2 mb-2 " target="_blank">Export</a>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table style="color: #708090;" class="table table-bordered table-striped yajra-datatable" id="data_users_side" width="100%" cellspacing="0">
+                    <thead>
                                 <tr>
                                     <th scope="col">No</th>
                                     <th scope="col">Nama</th>
@@ -133,8 +136,10 @@
                         Jumlah Peserta Didik : {{ $tendik->total() }} <br/>
                     
                         {{ $tendik->links() }}
-                    </div>
+                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
 @endsection

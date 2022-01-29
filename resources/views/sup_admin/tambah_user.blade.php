@@ -4,9 +4,8 @@
     <div class="card-user shadow mb-4">
         <div class="card-header py-3">
             <div class="col-md-12">
-                <h3 class="m-0 font-weight-bold" style="color: 	#8B0000;">Data User 
-                <button style="float: right; font-weight: 600; background: 	#3CB371; color: white;" type="button" class="btn btn-success float-right mb-1" data-toggle="modal" data-target="#ModalTambahUser">Tambah User</button>
-                </h6>
+                <h3 class="m-0 font-weight-bold" style="color: #8B0000;">Data User</h3>
+                <button type="button" style="float: right; font-weight: 600; background: #3CB371; color: white;" class="btn btn-success float-right mb-1" data-bs-toggle="modal" data-bs-target="#tambahUser">Tambah User</button>
             </div>
         </div>
         <div class="card-body">
@@ -26,7 +25,7 @@
                         @php
                         $no = 0;
                         @endphp
-                        @forelse ($users as $users)
+                        @forelse($users as $users)
                         <tr class="text-center">
                             <th scope="row">{{ ++$no }}</th>
                             <td>{{ $users->name }}</td>
@@ -44,32 +43,30 @@
         </div>
     </div>
 </div>
-<!-- Create Article Modal -->
-<div class="modal" id="ModalTambahUser" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Tambah User</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-            <!--FORM TAMBAH BARANG-->
-            <form action="" method=" ">
-                <div class="form-group">
-                    <label for="">Nama Barang</label>
-                    <input type="text" class="form-control" id="addNamaBarang" name="addNamaBarang" aria-describedby="emailHelp">
-                </div>
-                <div class="form-group">
-                    <label for="">Jumlah Barang</label>
-                    <input type="text" class="form-control" id="addJumlahBarang" name="addJumlahBarang">
-                </div>
-                <button type="submit" class="btn btn-primary">Simpan Data</button>
-            </form>
-            <!--END FORM TAMBAH BARANG-->
-            </div>
-        </div>
+<div class="modal fade" id="tambahUser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Recipient:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
     </div>
+  </div>
 </div>
 @endsection

@@ -17,7 +17,7 @@ class PesertaDidikController extends Controller
 	{
 		$peserta_didik = DB::table('peserta_didik')
         ->orderByRaw('nama_pd ASC')
-        ->paginate(10);
+        ->paginate(5);
 
         
         return view('sup_admin\peserta_didik', [

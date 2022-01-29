@@ -24,9 +24,9 @@ class cobaController extends Controller
 
         if(Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended('/lembaga');
+            return redirect()->intended('/admin');
+        }else{
+            return back()->with('loginError', 'Login failed!');
         }
-
-        return back()->with('loginError', 'Login failed!');
     }
 }
