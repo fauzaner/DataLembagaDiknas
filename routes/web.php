@@ -34,7 +34,6 @@ use App\Http\Controllers\ProfilControlle;
 */
 Route::get('/sup_admin', function () {return view('sup_admin'); });
 Route::get('/form', function () { return view('form'); });
-Route::get('/upload', function () { return view('upload'); });
 
 Route::get('/pd', [App\Http\Controllers\DataPDController::class, 'index'])->name('daftar_pd');
 Route::post('/pd/import', [App\Http\Controllers\DataPDController::class, 'import']);
