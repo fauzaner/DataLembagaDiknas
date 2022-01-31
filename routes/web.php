@@ -21,6 +21,7 @@ use App\Models\User;
 */
 
 Route::get('/sup_admin', [App\Http\Controllers\SupAdminController::class, 'index'])->name('dashboard_admin');
+<<<<<<< HEAD
 
 Route::get('/pd', [App\Http\Controllers\PesertaDidikController::class, 'peserta'])->name('daftar-pd-lembaga');
 Route::post('/pd/import', [App\Http\Controllers\PesertaDidikController::class, 'import'])->name('import-pd-lembaga');
@@ -29,6 +30,19 @@ Route::post('/td/import', [App\Http\Controllers\DataTendikController::class, 'im
 Route::get('/gr', [App\Http\Controllers\DataGuruController::class, 'index'])->name('daftar_guru');
 Route::post('/gr/import', [App\Http\Controllers\DataGuruController::class, 'import']);
 
+=======
+=======
+Route::get('/sup_admin', function () {return view('sup_admin'); })->name('dashboard_admin');
+Route::get('/form', function () { return view('form'); });
+Route::get('/upload', function () { return view('upload'); });
+<<<<<<< HEAD
+=======
+>>>>>>> 3304878e8217fc8ff68ff41cfae8abdbce52ade2
+>>>>>>> b1235a6f8449ec108f3cd3b44b9b736087773d6c
+>>>>>>> 7dcd8d561337858b3f51f4e22765807af55ed285
+Route::get('/pd', [App\Http\Controllers\DataPDController::class, 'index'])->name('daftar_pd');
+Route::post('/pd/import', [App\Http\Controllers\DataPDController::class, 'import'])->name('import_pd');
+>>>>>>> ec3a47b660f7f37fb8c229b586ee44ba054d0fc0
 Route::get('/profil', [App\Http\Controllers\ProfilController::class, 'index'])->name('daftar_profil');
 Route::post('/profil/import', [App\Http\Controllers\ProfilController::class, 'import']);
 

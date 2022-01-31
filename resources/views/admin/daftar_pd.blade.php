@@ -1,9 +1,40 @@
 @extends('layouts.main')
 @section('content')
+<<<<<<< HEAD
+=======
+<div class="data-pesdik relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
+<div class="row">
+                    <form action="/pd" method="post" enctype="multipart/form-data">
+                        @csrf
+                        <div class="input-group mb-3">
+                            <input type="file" name="file" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <button class="btn btn-primary" type="submit" id="button-addon2">Import</button>
+                        </div>
+                    </form>
+        <div class="card-body">
+            <div class="table-responsive nowrap">
+                <table style="color: #708090;" class="table table-bordered table-striped yajra-datatable" id="data_users_side" width="100%" cellspacing="0">  
+>>>>>>> ec3a47b660f7f37fb8c229b586ee44ba054d0fc0
     <div class="container overflow-x-scroll">
         <div class="card-user shadow mb-4">
             <div class="card-header py-3">
                 <div class="col-md-12">
+<<<<<<< HEAD
+=======
+                    <h3 class="m-0 font-weight-bold" style="color: 	#8B0000;">Data Peserta Didik 
+                    <button style="float: right; font-weight: 600; background: 	#3CB371; color: white;" class="btn " type="button" data-toggle="modal" data-target="#CreateArticleModal">
+                        Import
+                    </button>
+                    </h3>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                <table style="color: #708090;" class="table table-bordered table-striped yajra-datatable" id="data_users_side" width="100%" cellspacing="0">
+        <div class="card-user shadow mb-4">
+            <div class="card-header py-3">
+                <div class="col-md-12">
+>>>>>>> ec3a47b660f7f37fb8c229b586ee44ba054d0fc0
                 <h1 class="m-0 font-weight-bold" style="color: 	#8B0000;">Data Peserta Didik</h1>
                 <button style="float: right; font-weight: 600; background: 	#3CB371; color: white;" class="btn " type="button" data-toggle="modal" data-target="#CreateArticleModal">
                     Import
@@ -14,7 +45,12 @@
             <div class="table-responsive">
                     <table class="table table-hover table-bordered yajra-datatable " width="100%" >
                     <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+<<<<<<< HEAD
                             <thead class="header_pd" width="50">
+=======
+                        <table class="table table-hover table-bordered yajra-datatable" width="100%" cellspacing="0">
+                            <thead>
+>>>>>>> ec3a47b660f7f37fb8c229b586ee44ba054d0fc0
                                 <tr class="text-center">
                                     <th style="min-width:20px">No</th>
                                     <th style="min-width:250px">Nama</th>
@@ -174,5 +210,10 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 
 @endsection
+=======
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+>>>>>>> ec3a47b660f7f37fb8c229b586ee44ba054d0fc0
