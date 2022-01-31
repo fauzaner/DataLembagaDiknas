@@ -28,11 +28,7 @@ use App\Http\Controllers\ProfilControlle;
 */
 Route::get('/sup_admin', function () {return view('sup_admin'); })->name('dashboard_admin');
 Route::get('/form', function () { return view('form'); });
-<<<<<<< HEAD
-
-=======
 Route::get('/upload', function () { return view('upload'); });
->>>>>>> 3304878e8217fc8ff68ff41cfae8abdbce52ade2
 Route::get('/pd', [App\Http\Controllers\DataPDController::class, 'index'])->name('daftar_pd');
 Route::post('/pd/import', [App\Http\Controllers\DataPDController::class, 'import'])->name('import_pd');
 Route::get('/profil', [App\Http\Controllers\ProfilController::class, 'index'])->name('daftar_profil');
