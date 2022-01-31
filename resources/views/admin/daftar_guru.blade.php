@@ -1,17 +1,20 @@
 @extends('layouts.main')
 @section('content')
 <div class="relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
-            <div class="container">
-                <div class="row">
-                    <form action="/gr" method="post" enctype="multipart/form-data">
-                        @csrf
-                        <div class="input-group mb-3">
-                            <input type="file" name="file" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-                            <button class="btn btn-primary" type="submit" id="button-addon2">Import</button>
-                        </div>
-                    </form>
-                    <div class="table-responsive">
-                        <table class="table table-striped table-hover table-bordered">
+    <div class="container overflow-x-scroll">
+        <div class="card-user shadow mb-4">
+            <div class="card-header py-3">
+                <div class="col-md-12">
+                    <h1 class="m-0 font-weight-bold" style="color: 	#8B0000;">Data Peserta Didik</h1>
+                    <button style="float: right; font-weight: 600; background: 	#3CB371; color: white;" class="btn btn-success float-right mb-1" type="button" data-toggle="modal" data-target="#ModalCreate">
+                        Import
+                    </button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive nowrap">
+                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                        <table class="table table-striped table-hover table-bordered" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
                                     <th scope="col">No</th>
@@ -137,4 +140,29 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+@endsection
+@section('modal')
+<form action="/gr" method="post" enctype="multipart/form-data">
+    @csrf
+    <div class="modal fade text-left" id="ModalCreate" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Import Data</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group mb-3" id="ModalCreate">
+                        <input type="file" name="file" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-primary" type="submit" id="button-addon2">Import</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+</form>
 @endsection

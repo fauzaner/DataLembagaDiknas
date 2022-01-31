@@ -29,11 +29,7 @@
               <main class="form-signin">
               <img class="logo-data mb-4" src="https://img.icons8.com/cotton/50/000000/doughnut-chart.png" width="50"/>
     <h1 class="h3 mb-4 fw-bold text-center">Data Warehouse</h1>
-<<<<<<< HEAD
   <form action="{{ url('login') }}" method="POST">
-=======
-  <form action="{{ route('login') }}" method="post">
->>>>>>> c11f458e2c323858b1599524c1acf0d90130bf18
       @csrf
     <div class="form-floating">
       <label for="username">Username</label>
