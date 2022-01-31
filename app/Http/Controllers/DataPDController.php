@@ -16,14 +16,13 @@ class DataPDController extends Controller
         $peserta_didik = DB::table('peserta_didik')
         ->orderByRaw('nama_pd ASC')
         ->paginate(5);
-        $peserta_didik = PesertaDidik::orderBy('nama_pd')->paginate(10);
 
         return view('admin\daftar_pd', [
             'title' => "Peserta Didik",
-            compact('peserta_didik')
-
+            'peserta_didik' => $peserta_didik
         ]);
     }
+    
 
     public function import(){
         Excel::import(new PDImport,
