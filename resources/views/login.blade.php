@@ -21,7 +21,6 @@
               <div class="alert alert-success alert-dismissible fade show" role="alert">
                   {{ session('success') }}
                   <button class="button" class="btn-close" data-bs-dismiss="alert">
-
                   </button>
               </div>
               @endif
@@ -29,20 +28,25 @@
               <main class="form-signin">
               <img class="logo-data mb-4" src="https://img.icons8.com/cotton/50/000000/doughnut-chart.png" width="50"/>
     <h1 class="h3 mb-4 fw-bold text-center">Data Warehouse</h1>
+<<<<<<< HEAD
   <form action="{{ url('login') }}" method="POST">
+=======
+  <form action="{{ route('login') }}" method="post">
+
+>>>>>>> 949d313db98e28909be4f128d8dd86cc5f17360a
       @csrf
     <div class="form-floating">
-      <label for="username">Username</label>
       <input type="username" name="username" class="form-control" id="username" placeholder="Masukkan Username" autofocus required>
-      @error('password')
+      <label for="username">Username</label>
+      @error('username')
         <span class="invalid-feedback" role="alert">
           <strong>{{ $message }}</strong>
         </span>
       @enderror
     </div>
     <div class="form-floating">
-      <label for="password">Password</label>
       <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
+      <label for="password">Password</label>
       @error('password')
         <span class="invalid-feedback" role="alert">
           <strong>{{ $message }}</strong>
@@ -50,7 +54,7 @@
       @enderror
     </div>
     <button class="w-100 btn btn-lg btn-primary rounded-pill" type="submit">Login</button>
-    <p class="mt-5 mb-3 text-muted text-center">&copy; Sungram Disdik</p>
+    <p class="mt-5 mb-3 text-muted text-center">&copy; 2022 Dinas Pendidikan</p>
   </form>
 </main>
           </div>

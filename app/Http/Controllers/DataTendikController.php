@@ -16,7 +16,6 @@ class DataTendikController extends Controller
         ->orderByRaw('nama_tk ASC')
         ->paginate(5);
 
-        
         return view('admin\daftar_tendik', [
             'title' => "Tenaga Kependidikan",
             'tendik' => $tendik

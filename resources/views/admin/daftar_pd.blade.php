@@ -1,88 +1,137 @@
 @extends('layouts.main')
 @section('content')
+<<<<<<< HEAD
 
 <div class="data-pesdik relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
+=======
+<<<<<<< HEAD
+=======
+<div class="data-pesdik relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
+<div class="row">
+                    <form action="/pd" method="post" enctype="multipart/form-data">
+                        @csrf
+                        <div class="input-group mb-3">
+                            <input type="file" name="file" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <button class="btn btn-primary" type="submit" id="button-addon2">Import</button>
+                        </div>
+                    </form>
+        <div class="card-body">
+            <div class="table-responsive nowrap">
+                <table style="color: #708090;" class="table table-bordered table-striped yajra-datatable" id="data_users_side" width="100%" cellspacing="0">  
+>>>>>>> ec3a47b660f7f37fb8c229b586ee44ba054d0fc0
+>>>>>>> 949d313db98e28909be4f128d8dd86cc5f17360a
     <div class="container overflow-x-scroll">
         <div class="card-user shadow mb-4">
             <div class="card-header py-3">
                 <div class="col-md-12">
+<<<<<<< HEAD
                     <h1 class="m-0 font-weight-bold" style="color: 	#8B0000;">Data Peserta Didik</h1>
                     <button style="float: right; font-weight: 600; background: 	#3CB371; color: white;" class="btn btn-success float-right mb-1" type="button" data-toggle="modal" data-target="#ModalCreate">
+=======
+<<<<<<< HEAD
+=======
+                    <h3 class="m-0 font-weight-bold" style="color: 	#8B0000;">Data Peserta Didik 
+                    <button style="float: right; font-weight: 600; background: 	#3CB371; color: white;" class="btn " type="button" data-toggle="modal" data-target="#CreateArticleModal">
+>>>>>>> 949d313db98e28909be4f128d8dd86cc5f17360a
                         Import
                     </button>
                 </div>
             </div>
             <div class="card-body">
+<<<<<<< HEAD
                 <div class="table-responsive nowrap">
                     <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+=======
+                <div class="table-responsive">
+                <table style="color: #708090;" class="table table-bordered table-striped yajra-datatable" id="data_users_side" width="100%" cellspacing="0">
+        <div class="card-user shadow mb-4">
+            <div class="card-header py-3">
+                <div class="col-md-12">
+>>>>>>> ec3a47b660f7f37fb8c229b586ee44ba054d0fc0
+                <h1 class="m-0 font-weight-bold" style="color: 	#8B0000;">Data Peserta Didik</h1>
+                <button style="float: right; font-weight: 600; background: 	#3CB371; color: white;" class="btn " type="button" data-toggle="modal" data-target="#CreateArticleModal">
+                    Import
+                </button>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                    <table class="table table-hover table-bordered yajra-datatable " width="100%" >
+                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+<<<<<<< HEAD
+                            <thead class="header_pd" width="50">
+=======
+>>>>>>> 949d313db98e28909be4f128d8dd86cc5f17360a
                         <table class="table table-hover table-bordered yajra-datatable" width="100%" cellspacing="0">
                             <thead>
+>>>>>>> ec3a47b660f7f37fb8c229b586ee44ba054d0fc0
                                 <tr class="text-center">
-                                    <th>No</th>
-                                    <th>Nama</th>
-                                    <th>NIPD</th>
-                                    <th>JK</th>
-                                    <th>NISN</th>
-                                    <th>Tempat Lahir</th>
-                                    <th>Tanggal Lahir</th>
-                                    <th>NIK</th>
-                                    <th>Agama</th>
-                                    <th>Alamat</th>
+                                    <th style="min-width:20px">No</th>
+                                    <th style="min-width:250px">Nama</th>
+                                    <th style="min-width:150px">NIPD</th>
+                                    <th style="min-width:110px">Jenis Kelamin</th>
+                                    <th style="min-width:100px">NISN</th>
+                                    <th style="min-width:120px">Tempat Lahir</th>
+                                    <th style="min-width:120px">Tanggal Lahir</th>
+                                    <th style="min-width:150px">NIK</th>
+                                    <th style="min-width:100px">Agama</th>
+                                    <th style="min-width:150px">Alamat</th>
                                     <th>RT</th>
                                     <th>RW</th>
                                     <th>Dusun</th>
                                     <th>Kelurahan</th>
-                                    <th>Kecamatan</th>
-                                    <th>Kode Pos</th>
-                                    <th>Jenis Tinggal</th>
-                                    <th>Alat Transportasi</th>
-                                    <th>Telepon</th>
-                                    <th>HP</th>
-                                    <th>E-Mail</th>
-                                    <th>SKHUN</th>
-                                    <th>Penerima KPS</th>
-                                    <th>No. KPS</th>
-                                    <th>Nama Ayah</th>
-                                    <th>Tahun Lahir Ayah</th>
-                                    <th>Jenjang Pendidikan Ayah</th>
-                                    <th>Pekerjaan Ayah</th>
-                                    <th>Penghasilan Ayah</th>
-                                    <th>NIK Ayah</th>
-                                    <th>Nama Ibu</th>
-                                    <th>Tahun Lahir Ibu</th>
-                                    <th>Jenjang Pendidikan Ibu</th>
-                                    <th>Pekerjaan Ibu</th>
-                                    <th>Penghasilan Ibu</th>
-                                    <th>NIK Ibu</th>
-                                    <th>Nama Wali</th>
-                                    <th>Tahun Lahir Wali</th>
-                                    <th>Jenjang Pendidikan Wali</th>
-                                    <th>Pekerjaan Wali</th>
-                                    <th>Penghasilan Wali</th>
-                                    <th>NIK Wali</th>
-                                    <th>Rombel Saat Ini</th>
-                                    <th>No Peserta UN</th>
-                                    <th>No Seri Ijazah</th>
-                                    <th>Nomor KIP</th>
-                                    <th>Nama di KIP</th>
-                                    <th>Nomor KKS</th>
-                                    <th>No Registrasi Akta Lahir</th>
-                                    <th>Bank</th>
-                                    <th>Nomor Rekening Bank</th>
-                                    <th>Rekening Atas Nama</th>
-                                    <th>Layak PIP(usulan dari sekolah)</th>
-                                    <th>Alasan Layak PIP</th>
-                                    <th>Kebutuhan Khusus</th>
-                                    <th>Sekolah Asal</th>
-                                    <th>Anak ke-berapa</th>
-                                    <th>Lintang</th>
-                                    <th>Bujur</th>
-                                    <th>No KK</th>
-                                    <th>Berat Badan</th>
-                                    <th>Tinggi Badan</th>
-                                    <th>Lingkar Kepala</th>
-                                    <th>Jumlah Saudara Kandung</th>
-                                    <th>Jarak Rumah ke Sekolah(KM)</th>
+                                    <th style="min-width:100px">Kecamatan</th>
+                                    <th style="min-width:100px">Kode Pos</th>
+                                    <th style="min-width:150px">Jenis Tinggal</th>
+                                    <th style="min-width:150px">Alat Transportasi</th>
+                                    <th style="min-width:100px">Telepon</th>
+                                    <th style="min-width:100px">HP</th>
+                                    <th style="min-width:200px">E-Mail</th>
+                                    <th style="min-width:200px">SKHUN</th>
+                                    <th style="min-width:150px">Penerima KPS</th>
+                                    <th style="min-width:200px">No. KPS</th>
+                                    <th style="min-width:200px">Nama Ayah</th>
+                                    <th style="min-width:150px">Tahun Lahir Ayah</th>
+                                    <th style="min-width:200px">Jenjang Pendidikan Ayah</th>
+                                    <th style="min-width:200px">Pekerjaan Ayah</th>
+                                    <th style="min-width:200px">Penghasilan Ayah</th>
+                                    <th style="min-width:150px">NIK Ayah</th>
+                                    <th style="min-width:200px">Nama Ibu</th>
+                                    <th style="min-width:150px">Tahun Lahir Ibu</th>
+                                    <th style="min-width:200px">Jenjang Pendidikan Ibu</th>
+                                    <th style="min-width:200px">Pekerjaan Ibu</th>
+                                    <th style="min-width:200px">Penghasilan Ibu</th>
+                                    <th style="min-width:150px">NIK Ibu</th>
+                                    <th style="min-width:200px">Nama Wali</th>
+                                    <th style="min-width:150px">Tahun Lahir Wali</th>
+                                    <th style="min-width:200px">Jenjang Pendidikan Wali</th>
+                                    <th style="min-width:200px">Pekerjaan Wali</th>
+                                    <th style="min-width:200px">Penghasilan Wali</th>
+                                    <th style="min-width:150px">NIK Wali</th>
+                                    <th style="min-width:200px">Rombel Saat Ini</th>
+                                    <th style="min-width:200px">No Peserta UN</th>
+                                    <th style="min-width:200px">No Seri Ijazah</th>
+                                    <th style="min-width:200px">Penerima KIP</th>
+                                    <th style="min-width:200px">Nomor KIP</th>
+                                    <th style="min-width:200px">Nama di KIP</th>
+                                    <th style="min-width:200px">Nomor KKS</th>
+                                    <th style="min-width:200px">No Registrasi Akta Lahir</th>
+                                    <th style="min-width:200px">Bank</th>
+                                    <th style="min-width:200px">Nomor Rekening Bank</th>
+                                    <th style="min-width:200px">Rekening Atas Nama</th>
+                                    <th style="min-width:200px">Layak PIP(usulan dari sekolah)</th>
+                                    <th style="min-width:200px">Alasan Layak PIP</th>
+                                    <th style="min-width:200px">Kebutuhan Khusus</th>
+                                    <th style="min-width:200px">Sekolah Asal</th>
+                                    <th style="min-width:200px">Anak ke-berapa</th>
+                                    <th style="min-width:150px">Lintang</th>
+                                    <th style="min-width:150px">Bujur</th>
+                                    <th style="min-width:150px">No KK</th>
+                                    <th style="min-width:200px">Berat Badan</th>
+                                    <th style="min-width:200px">Tinggi Badan</th>
+                                    <th style="min-width:200px">Lingkar Kepala</th>
+                                    <th style="min-width:200px">Jumlah Saudara Kandung</th>
+                                    <th style="min-width:200px">Jarak Rumah ke Sekolah(KM)</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -114,6 +163,7 @@
                                     <td>{{ $pd->email }}</td>
                                     <td>{{ $pd->skhun }}</td>
                                     <td>{{ $pd->penerima_kps }}</td>
+                                    <td>{{ $pd->no_kps }}</td>
                                     <td>{{ $pd->nama_ayah }}</td>
                                     <td>{{ $pd->thn_lhr_ayah }}</td>
                                     <td>{{ $pd->pend_ayah }}</td>
@@ -172,6 +222,7 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 @endsection
 @section('modal')
 <form action="/pd" method="post" enctype="multipart/form-data">
@@ -196,3 +247,12 @@
     </div>  
 </form>
 @endsection
+=======
+<<<<<<< HEAD
+
+@endsection
+=======
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+>>>>>>> ec3a47b660f7f37fb8c229b586ee44ba054d0fc0
+>>>>>>> 949d313db98e28909be4f128d8dd86cc5f17360a
