@@ -19,20 +19,15 @@ use App\Models\User;
 | contains the "web" middleware group. Now create something great!
 |
 */
-<<<<<<< HEAD
 
 Auth::routes();
 
 Route::get('/sup_admin', [App\Http\Controllers\SupAdminController::class, 'index'])->name('dashboard_admin');
-=======
+
 Route::get('/sup_admin', function () {return view('sup_admin'); })->name('dashboard_admin');
 Route::get('/form', function () { return view('form'); });
 Route::get('/upload', function () { return view('upload'); });
-<<<<<<< HEAD
-=======
->>>>>>> 3304878e8217fc8ff68ff41cfae8abdbce52ade2
->>>>>>> b1235a6f8449ec108f3cd3b44b9b736087773d6c
->>>>>>> 7dcd8d561337858b3f51f4e22765807af55ed285
+
 Route::get('/pd', [App\Http\Controllers\DataPDController::class, 'index'])->name('daftar_pd');
 Route::post('/pd/import', [App\Http\Controllers\DataPDController::class, 'import'])->name('import_pd');
 Route::get('/profil', [App\Http\Controllers\ProfilController::class, 'index'])->name('daftar_profil');
@@ -75,3 +70,7 @@ Route::get('/test', [App\Http\Controllers\TestController::class, 'test'])->name(
 Route::post('actionlogin', [App\Http\Controllers\TestController::class, 'actionlogin'])->name('actionlogin');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//Cobaaa
+Route::get('/sidebar', function() {return view('sidebar'); });
+Route::get('/tests', function() {return view('tests'); });

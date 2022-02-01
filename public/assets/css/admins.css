@@ -74,7 +74,7 @@ div.dataTables_wrapper {
   text-align: right;
 }
 .sidebar i{
-  color: #fff;
+  color: rgb(231, 123, 123);
   height: 60px;
   min-width: 50px;
   font-size: 28px;
@@ -91,22 +91,7 @@ div.dataTables_wrapper {
   margin: 8px 0;
   list-style: none;
 }
-.sidebar li .tooltip{
-  position: absolute;
-  top: -20px;
-  left: calc(100% + 15px);
-  z-index: 3;
-  background: #fff;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-size: 15px;
-  font-weight: 400;
-  opacity: 0;
-  white-space: nowrap;
-  pointer-events: none;
-  transition: 0s;
-}
+
 .sidebar li:hover .tooltip{
   opacity: 1;
   pointer-events: auto;
@@ -162,7 +147,7 @@ div.dataTables_wrapper {
   background: #11101D;
 }
 .sidebar li a:hover{
-  background: #FFF;
+  background: #75cfb8;
 }
 .sidebar li a .links_name{
   color: #fff;

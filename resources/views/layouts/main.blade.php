@@ -35,7 +35,10 @@
         <i class='bx bx-data'></i>
          <span class="links_name">Data Master</span>
         </a>
-       <span class="tooltip">Data Master</span>
+       <span class="tooltip">Data Master
+       <i class='bx bxs-chevron-down arrow'></i>
+       </span>
+       
      </li>
      <li>
        <a href="#">
