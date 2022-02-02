@@ -75,7 +75,7 @@
 <!-- Content -->
 <section class="home-section">
     <div class="home-content">
-      <i class='menu bx bx-menu' style="color: white; margin-left: 30px;"></i>
+      <i class='menu bx bx-menu' style="color: white; margin-left: 20px;"></i>
       @yield('content')
       </div>
     </div>
