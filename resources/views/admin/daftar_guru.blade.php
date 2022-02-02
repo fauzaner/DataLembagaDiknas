@@ -146,6 +146,7 @@
 @endsection
 @section('modal')
 <form action="/gr" method="post" enctype="multipart/form-data">
+<form action="/gr/import" method="post" enctype="multipart/form-data">
     @csrf
     <div class="modal fade text-left" id="ModalCreate" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">

@@ -47,7 +47,7 @@ Route::post('/pd/import', [App\Http\Controllers\PesertaDidikController::class, '
 Route::get('/td', [App\Http\Controllers\DataTendikController::class, 'index'])->name('daftar_tendik');
 Route::post('/td/import', [App\Http\Controllers\DataTendikController::class, 'import']);
 Route::get('/gr', [App\Http\Controllers\DataGuruController::class, 'index'])->name('daftar_guru');
-Route::post('/gr/import', [App\Http\Controllers\DataGuruController::class, 'import']);
+Route::post('/gr', [App\Http\Controllers\DataGuruController::class, 'import']);
 
 
 Route::get('/admin', function () {return view('admin'); }); 

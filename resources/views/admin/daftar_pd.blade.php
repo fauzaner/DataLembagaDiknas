@@ -6,7 +6,7 @@
         <div class="card-user shadow mb-4">
             <div class="card-header py-3">
                 <div class="col-md-12">
-                    <h1 class="m-0 font-weight-bold" style="color: 	#8B0000;">Data Peserta Didik</h1>
+                    <h1 class="m-0 font-weight-bold" style="color: 	#8B0000;"></h1>
                     <button style="float: right; font-weight: 600; background: 	#3CB371; color: white;" class="btn btn-import btn-success float-right mb-1" type="button" data-toggle="modal" data-target="#ModalCreate">
                         Import
                     </button>
