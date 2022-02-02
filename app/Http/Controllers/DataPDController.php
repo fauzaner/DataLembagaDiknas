@@ -12,7 +12,6 @@ use Alert;
 class DataPDController extends Controller
 {
     public function index(){
-
         $peserta_didik = DB::table('peserta_didik')
         ->orderByRaw('nama_pd ASC')
         ->paginate(5);
