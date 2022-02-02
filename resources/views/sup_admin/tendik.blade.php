@@ -1,7 +1,7 @@
 @extends('layouts.main_supadmin')
 @section('content')
-<span class="text">Pesdik</span>
-    <div class="data-master relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
+<span class="text">Tendik</span>
+    <div class="data-tendik">
     <div class="container overflow-x-scroll">
                     <form action="/tendik/export" method="post" enctype="multipart/form-data">
                     <form action="/tendik" method="post" enctype="multipart/form-data">
