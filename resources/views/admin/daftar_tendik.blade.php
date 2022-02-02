@@ -1,6 +1,7 @@
-@extends('layouts.main')
+@extends('layouts.main_admin')
 @section('content')
-<div class="relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
+<span class="text">Pesdik</span>
+<div class="data-master relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
     <div class="container overflow-x-scroll">
         <div class="card-user shadow mb-4">
             <div class="card-header py-3">

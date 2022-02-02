@@ -1,7 +1,9 @@
-@extends('layouts.main')
+@extends('layouts.main_supadmin')
 @section('content')
-    <div class="data-pesdik relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
-                    <form action="/guru/export" method="post" enctype="multipart/form-data">
+<span class="text">Pesdik</span>
+    <div class="data-master relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
+    <div class="container overflow-x-scroll">
+    <form action="/guru/export" method="post" enctype="multipart/form-data">
                     <form action="/guru" method="post" enctype="multipart/form-data">
                         @csrf
                     </form>

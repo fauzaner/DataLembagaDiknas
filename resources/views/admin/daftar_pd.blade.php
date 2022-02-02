@@ -1,13 +1,22 @@
-@extends('layouts.main')
+@extends('layouts.main_admin')
 @section('content')
+<<<<<<< HEAD
 
 <div class="data-pesdik relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
+=======
+<span class="text">Pesdik</span>
+<div class="data-master relative flex items-top min-h-screen sm:pt-0">
+>>>>>>> c952076bd110ad60a6497779904b70b27fb4104b
     <div class="container overflow-x-scroll">
         <div class="card-user shadow mb-4">
             <div class="card-header py-3">
                 <div class="col-md-12">
                     <h1 class="m-0 font-weight-bold" style="color: 	#8B0000;">Data Peserta Didik</h1>
+<<<<<<< HEAD
                     <button style="float: right; font-weight: 600; background: 	#3CB371; color: white;" class="btn btn-success float-right mb-1" type="button" data-toggle="modal" data-target="#ModalCreate">
+=======
+                    <button style="float: right; font-weight: 600; background: 	#3CB371; color: white;" class="btn btn-import btn-success float-right mb-1" type="button" data-toggle="modal" data-target="#ModalCreate">
+>>>>>>> c952076bd110ad60a6497779904b70b27fb4104b
                         Import
                     </button>
                 </div>
@@ -178,7 +187,7 @@
 @section('modal')
 <form action="/pd" method="post" enctype="multipart/form-data">
     @csrf
-    <div class="modal fade text-left" id="ModalCreate" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal pop-up fade text-left" id="ModalCreate" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">

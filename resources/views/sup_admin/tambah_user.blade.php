@@ -1,13 +1,18 @@
-@extends('layouts.main')
+@extends('layouts.main_supadmin')
 @section('content')
-<div class="container">
+<span class="text">Pesdik</span>
+<div class="container data-master">
     <div class="card-user shadow mb-4">
         <div class="card-header py-3">
             <div class="col-md-12">
                 <h3 class="m-0 font-weight-bold" style="color: #8B0000;">Data User</h3>
+<<<<<<< HEAD
                 <button style="float: right; font-weight: 600; background: 	#3CB371; color: white;" class="btn btn-success float-right mb-1" type="button" data-toggle="modal" data-target="#ModalCreate">
                   Create User
                 </button>
+=======
+                <button type="button" style="float: right; font-weight: 600; background: #3CB371; color: white;" class="btn btn-tambah btn-success float-right mb-1" data-bs-toggle="modal" data-bs-target="#tambahUser">Tambah User</button>
+>>>>>>> c952076bd110ad60a6497779904b70b27fb4104b
             </div>
         </div>
         <div class="card-body">
