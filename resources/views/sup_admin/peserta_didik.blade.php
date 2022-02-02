@@ -1,7 +1,12 @@
 @extends('layouts.main_supadmin')
 @section('content')
+<<<<<<< HEAD
 <span class="text-title">Pesdik</span>
 <div class="data-pesdik">
+=======
+<span class="text">Pesdik</span>
+<div class="data-master relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
+>>>>>>> 7928e38be46e03c5f1078b4932d1f46b70865fe5
 <div class="container overflow-x-scroll">
                     <form action="/pesdik/export" method="post" enctype="multipart/form-data">
                     <form action="/pesdik" method="post" enctype="multipart/form-data">
