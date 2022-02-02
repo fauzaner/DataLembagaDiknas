@@ -7,6 +7,7 @@
   font-family: "Poppins" , sans-serif;
 }
 
+
 .sidebar{
   position: fixed;
   top: 0;
@@ -29,7 +30,6 @@
 }
 .sidebar .logo-details i{
   font-size: 10px;
-  color: #fff;
   height: 50px;
   min-width: 78px;
   text-align: center;
@@ -286,6 +286,50 @@
     padding-bottom: 30px;
 }
 
+/* Card */
+.cardBox{
+  position: relative;
+  width: 100%;
+  padding-right: 45px;
+  padding-left: 20px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 25px;
+  transition: transform .3s;
+}
+
+.cardBox .card {
+    position: relative;
+    background-color: #75cfb8;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    -webkit-box-shadow: 3px 3px 10px #b8b9be, 6px 6px 6px #414047;
+    box-shadow: 3px 3px 10px #b8b9be, 6px 6px 6px #414047;
+    
+  }
+
+.cardBox .card:hover{
+  transform: translateY(-15px);
+  transition: transform .3s;
+  background-color: #f0e5d8;
+}
+
+.cardBox .card .numbers {
+    position: relative;
+    font-weight: 500;
+    font-size: 2.5rem;
+    color: whitesmoke;
+}
+
+.cardBox .card .cardName {
+    color: #595260;
+    font-size: 1.1em;
+    margin-top: 5px;
+}
+
 /* Card1 */
 .cardBox1{
   position: relative;
@@ -329,7 +373,95 @@
     font-size: 1.1em;
     margin-top: 5px;
 }
-  
+
+/* table */
+div.dataTables_wrapper {
+  width: 1050px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+.btn1{
+  border-radius: 40px;
+  width: 10%;
+  background-color: turquoise;
+  color: whitesmoke;
+  margin-left: 80px;
+  margin-top: 20px;
+}
+
+
+.data-master {
+  padding-top: 400px;
+  margin-left: -120px;
+
+}
+
+.table {
+  font-size: 12px;
+  width: 100%;
+  table-layout: unset;
+}
+
+
+.card-user {
+  margin-top: 50px;
+}
+
+.peserta {
+  margin-bottom: 90px;
+  padding-bottom: 20px;
+}
+
+
+.text-img {
+  text-align: left;
+  margin-top: -130px;
+  margin-left: 120px;
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+
+.text-admin {
+  text-align: left;
+  margin-top: -200px;
+  margin-left: 120px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.icon-data {
+    margin-bottom: 40px;
+    padding-bottom: 18px;
+}
+
+
+.text-label {
+    text-align: left;
+    font-size: 23px;
+    margin-top: -110px;
+    margin-left: 70px;
+}
+
+/* pop-up */
+.pop-up {
+  margin-top: 200px;
+}
+
+/* btn-import */
+.btn-import {
+  margin-top: -35px;
+  margin-right: 45px;
+}
+
+/* Tambah User */
+.btn-tambah {
+  margin-top: -35px;
+  margin-right: 45px;
+}
 @media (max-width: 420px) {
   .sidebar.close .nav-links li .sub-menu{
     display: none;

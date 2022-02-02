@@ -401,10 +401,8 @@ div.dataTables_wrapper {
 
 .table {
   font-size: 12px;
-  width: 100%;
-  table-layout: unset;
-}
 
+}
 
 .card-user {
   margin-top: 50px;
