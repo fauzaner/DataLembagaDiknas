@@ -5,7 +5,9 @@
         <div class="card-header py-3">
             <div class="col-md-12">
                 <h3 class="m-0 font-weight-bold" style="color: #8B0000;">Data User</h3>
-                <button type="button" style="float: right; font-weight: 600; background: #3CB371; color: white;" class="btn btn-success float-right mb-1" data-bs-toggle="modal" data-bs-target="#tambahUser">Tambah User</button>
+                <button style="float: right; font-weight: 600; background: 	#3CB371; color: white;" class="btn btn-success float-right mb-1" type="button" data-toggle="modal" data-target="#ModalCreate">
+                  Create User
+                </button>
             </div>
         </div>
         <div class="card-body">
@@ -69,4 +71,7 @@
     </div>
   </div>
 </div>
+@endsection
+@section('modal')
+@include('modal.tambah_user')
 @endsection
