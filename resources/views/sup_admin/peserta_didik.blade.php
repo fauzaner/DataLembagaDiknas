@@ -1,14 +1,5 @@
 @extends('layouts.main_supadmin')
 @section('content')
-<<<<<<< HEAD
-<div class="data-pesdik relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
-    <form action="/pesdik/export" method="post" enctype="multipart/form-data">
-    <form action="/pesdik" method="post" enctype="multipart/form-data">
-        @csrf
-    </form>
-    <div class="card-user shadow mb-4">
-        <div class="card-header py-3">
-=======
 <span class="text">Pesdik</span>
 <div class="data-master relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
 <div class="container overflow-x-scroll">
@@ -18,7 +9,6 @@
                     </form>
         <div class="card-user shadow mb-4">
             <div class="card-header py-3">
->>>>>>> c952076bd110ad60a6497779904b70b27fb4104b
             <div class="row">
                 <h1 class="font-weight-bold col-md-9" style="color: #8B0000; font-size: 30px;">Data Peserta Didik</h1>
                 <a href="/pesdik/export" class="btn  buttonex btn-success col-md-2 mb-2 " target="_blank">Export</a>
