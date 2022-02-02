@@ -8,9 +8,13 @@ use Illuminate\Foundation\Auth\User as Authenticable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Model;
 
+<<<<<<< HEAD
+class User extends Model
+=======
 
 class User extends Authenticable
 
+>>>>>>> c952076bd110ad60a6497779904b70b27fb4104b
 {
    use HasFactory, Notifiable;
    
