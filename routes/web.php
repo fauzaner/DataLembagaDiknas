@@ -28,26 +28,6 @@ Route::get('/td', [App\Http\Controllers\DataTendikController::class, 'index'])->
 Route::post('/td', [App\Http\Controllers\DataTendikController::class, 'import']);
 Route::get('/gr', [App\Http\Controllers\DataGuruController::class, 'index'])->name('daftar_guru');
 Route::post('/gr', [App\Http\Controllers\DataGuruController::class, 'import']);
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-Route::get('/admin', function () {return view('admin'); }); 
-Route::get('/sup_admin', function () {return view('sup_admin'); });
-
-Route::get('/coba', function () {return view('coba'); });
-
-Route::get('/pd', [App\Http\Controllers\DataPDController::class, 'index'])->name('daftar_pd');
-Route::post('/pd/import', [App\Http\Controllers\DataPDController::class, 'import'])->name('import_pd');
-
->>>>>>> eabcb42381b8ee42877a7939f964ace97cb8d0af
-Route::get('/profil', [App\Http\Controllers\ProfilController::class, 'index'])->name('daftar_profil');
-Route::post('/profil/import', [App\Http\Controllers\ProfilController::class, 'import']);
->>>>>>> 48f3367597c45d93df94bcf3ff0444adc68d68c7
 
 Route::get('/pesdik', [App\Http\Controllers\PesertaDidikController::class, 'index']);
 Route::get('/pesdik/export', [App\Http\Controllers\PesertaDidikController::class, 'export']);
