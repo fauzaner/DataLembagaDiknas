@@ -20,8 +20,8 @@
   @include('sweetalert::alert')
   <div class="sidebar close">
     <div class="logo-details">
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAKpJREFUSEvtldENwjAMRHP/cRgB2KSjwGQwCqOUDap4gENBalVo+xPXlSrIZxS/y9lKDsF5wZkfthNQ1QbAjeTJ4gpAS/IqIo/CGRzknFsARwu8ry0iMcbzh4CqsmyIyGLbas4MsJriObffHJNADxs735eAe4vcBf4zmLS45q2Y3oH7kH9PoAshHNb4rkk+U0rvXBkPuSF5t2ZCgQO4TAJnjZvPMbbLZC8HLxZK3RnN0G+OAAAAAElFTkSuQmCC"/>
-      <span class="logo_name">Data WareHouse</span>
+    <img class="logo-dinas img-fluid" src="{{asset('assets/img/Logo.png')}}"/><br><br>
+      <h4 class="logo_name">Data WareHouse</h4>
     </div>
     <ul class="nav-links">
       <li>
@@ -46,6 +46,7 @@
           <li><a href="/gr">Data Guru</a></li>
           <li><a href="/td">Data Tendik</a></li>
           <li><a href="/pd">Data Peserta</a></li>
+<<<<<<< HEAD
         </ul>
       </li>
       <li>
@@ -55,6 +56,8 @@
         </a>
         <ul class="sub-menu blank">
           <li><a class="link_name" href="#">Setting</a></li>
+=======
+>>>>>>> 0861372e8270c9a967139c20b2f862ac689e6f20
         </ul>
       </li>
       <li>
@@ -75,7 +78,7 @@
 <!-- Content -->
 <section class="home-section">
     <div class="home-content">
-      <i class='menu bx bx-menu' style="color: white; margin-left: 30px;"></i>
+      <i class='menu bx bx-menu' style="color: white; margin-left: 20px;"></i>
       @yield('content')
       </div>
     </div>

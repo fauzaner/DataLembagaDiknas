@@ -1,12 +1,31 @@
 @extends('layouts.main_admin')
 @section('content')
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<span class="text-title">Peserta Didik</span>
+<div class="data-master">
+=======
+<div class="data-pesdik relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
+>>>>>>> 0861372e8270c9a967139c20b2f862ac689e6f20
 <span class="text">Peserta Didik</span>
 <div class="data-master relative flex items-top min-h-screen sm:pt-0">
+>>>>>>> 7928e38be46e03c5f1078b4932d1f46b70865fe5
     <div class="container overflow-x-scroll">
         <div class="card-user shadow mb-2">
             <div class="card-header py-2">
                 <div class="col-md-12">
                     <h1 class="m-0 font-weight-bold" style="color: 	#8B0000;">Data Peserta Didik</h1>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    <button style="float: right; font-weight: 600; background: 	#3CB371; color: white;" class="btn btn-success float-right mb-1" type="button" data-toggle="modal" data-target="#ModalCreate">
+=======
+>>>>>>> 13884a07b643174c9aa5450ff538c236ebef73c7
+>>>>>>> 48f3367597c45d93df94bcf3ff0444adc68d68c7
+>>>>>>> 7928e38be46e03c5f1078b4932d1f46b70865fe5
                     <button style="float: right; font-weight: 600; background: 	#3CB371; color: white;" class="btn btn-import btn-success float-right mb-1" type="button" data-toggle="modal" data-target="#ModalCreate">
                         Import
                     </button>
@@ -176,7 +195,8 @@
 </div>
 @endsection
 @section('modal')
-<form action="/pd" method="post" enctype="multipart/form-data">
+<form action="/pd" method="POST" enctype="multipart/form-data">
+<form action="/pd/import" method="POST" enctype="multipart/form-data"> 
     @csrf
     <div class="modal pop-up fade text-left" id="ModalCreate" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
