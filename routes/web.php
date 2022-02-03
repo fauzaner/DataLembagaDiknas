@@ -7,20 +7,6 @@ use App\Models\PesertaDidik;
 use App\Models\Guru;
 use App\Models\Tendik;
 use App\Models\User;
-<<<<<<< HEAD
-use App\Http\Controllers\cobaController;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\TestController;
-use App\Http\Conttollers\dashboardController;
-use App\Http\Controllers\adminsController;
-use App\Http\Controllers\superController;
-use App\Http\Controllers\DataPDController;
-use App\Http\Controllers\DataTendikController;
-use App\Http\Controllers\DataGuruController;
-use App\Http\Controllers\ProfilControlle;
-=======
-
->>>>>>> 7928e38be46e03c5f1078b4932d1f46b70865fe5
 
 /*
 |--------------------------------------------------------------------------
@@ -32,15 +18,8 @@ use App\Http\Controllers\ProfilControlle;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-<<<<<<< HEAD
-=======
-Route::get('/sup_admin', [App\Http\Controllers\SupAdminController::class, 'index'])->name('dashboard_admin');
-
-<<<<<<< HEAD
 Route::get('/pd', [App\Http\Controllers\PesertaDidikController::class, 'peserta'])->name('daftar-pd-lembaga');
 Route::post('/pd/import', [App\Http\Controllers\PesertaDidikController::class, 'import'])->name('import-pd-lembaga');
->>>>>>> 0861372e8270c9a967139c20b2f862ac689e6f20
 Route::get('/sup_admin', [App\Http\Controllers\SupAdminController::class, 'index'])->name('dashboard_admin');
 Route::get('/pd', [App\Http\Controllers\DataPDController::class, 'index'])->name('daftar_pd');
 Route::post('/pd', [App\Http\Controllers\DataPDController::class, 'import']);
