@@ -1,6 +1,6 @@
 @extends('layouts.main_admin')
 @section('content')
-<span class="text">Pesdik</span>
+<span class="text">Guru</span>
 <div class="data-master">
     <div class="container overflow-x-scroll">
         <div class="card-user shadow mb-4">

@@ -45,7 +45,7 @@
           <li><a class="link_name" href="#">Data Master</a></li>
           <li><a href="/gr">Data Guru</a></li>
           <li><a href="/td">Data Tendik</a></li>
-          <li><a href="/td">Data Peserta</a></li>
+          <li><a href="/pd">Data Peserta</a></li>
         </ul>
       </li>
       <li>

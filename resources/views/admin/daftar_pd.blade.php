@@ -1,10 +1,10 @@
 @extends('layouts.main_admin')
 @section('content')
-<span class="text">Pesdik</span>
+<span class="text">Peserta Didik</span>
 <div class="data-master relative flex items-top min-h-screen sm:pt-0">
     <div class="container overflow-x-scroll">
-        <div class="card-user shadow mb-4">
-            <div class="card-header py-3">
+        <div class="card-user shadow mb-2">
+            <div class="card-header py-2">
                 <div class="col-md-12">
                     <h1 class="m-0 font-weight-bold" style="color: 	#8B0000;">Data Peserta Didik</h1>
                     <button style="float: right; font-weight: 600; background: 	#3CB371; color: white;" class="btn btn-import btn-success float-right mb-1" type="button" data-toggle="modal" data-target="#ModalCreate">

@@ -28,12 +28,7 @@
               <main class="form-signin">
               <img class="logo-data mb-4" src="https://img.icons8.com/cotton/50/000000/doughnut-chart.png" width="50"/>
     <h1 class="h3 mb-4 fw-bold text-center">Data Warehouse</h1>
-<<<<<<< HEAD
-  <form action="{{ url('login') }}" method="POST">
-=======
   <form action="{{ route('login') }}" method="post">
-
->>>>>>> 949d313db98e28909be4f128d8dd86cc5f17360a
       @csrf
     <div class="form-floating">
       <input type="username" name="username" class="form-control" id="username" placeholder="Masukkan Username" autofocus required>

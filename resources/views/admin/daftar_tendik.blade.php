@@ -1,6 +1,6 @@
 @extends('layouts.main_admin')
 @section('content')
-<span class="text">Pesdik</span>
+<div class="text" style="font-size: 10px">Tenaga Kependidikan</div>
 <div class="data-master relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
     <div class="container overflow-x-scroll">
         <div class="card-user shadow mb-4">

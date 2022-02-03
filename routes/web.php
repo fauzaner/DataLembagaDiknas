@@ -33,17 +33,13 @@ use App\Http\Controllers\ProfilControlle;
 |
 */
 
-<<<<<<< HEAD
 Route::get('/sup_admin', [App\Http\Controllers\SupAdminController::class, 'index'])->name('dashboard_admin');
-=======
 Route::get('/pd', [App\Http\Controllers\DataPDController::class, 'index'])->name('daftar_pd');
 Route::post('/pd', [App\Http\Controllers\DataPDController::class, 'import']);
 Route::get('/profil', [App\Http\Controllers\ProfilController::class, 'index'])->name('daftar_profil');
 Route::post('/profil/import', [App\Http\Controllers\ProfilController::class, 'import']);
 
-
 Route::get('/sups_admin', [App\Http\Controllers\superController::class, 'index'])->name('sups_admin');
->>>>>>> eabcb42381b8ee42877a7939f964ace97cb8d0af
 
 Route::get('/pd', [App\Http\Controllers\PesertaDidikController::class, 'peserta'])->name('daftar-pd-lembaga');
 Route::post('/pd/import', [App\Http\Controllers\PesertaDidikController::class, 'import'])->name('import-pd-lembaga');
@@ -53,21 +49,8 @@ Route::post('/td/import', [App\Http\Controllers\DataTendikController::class, 'im
 Route::get('/gr', [App\Http\Controllers\DataGuruController::class, 'index'])->name('daftar_guru');
 Route::post('/gr/import', [App\Http\Controllers\DataGuruController::class, 'import']);
 
-<<<<<<< HEAD
-=======
-
-Route::get('/admin', function () {return view('admin'); }); 
-Route::get('/sup_admin', function () {return view('sup_admin'); });
-
-Route::get('/coba', function () {return view('coba'); });
-
-Route::get('/pd', [App\Http\Controllers\DataPDController::class, 'index'])->name('daftar_pd');
-Route::post('/pd/import', [App\Http\Controllers\DataPDController::class, 'import'])->name('import_pd');
-
->>>>>>> eabcb42381b8ee42877a7939f964ace97cb8d0af
 Route::get('/profil', [App\Http\Controllers\ProfilController::class, 'index'])->name('daftar_profil');
 Route::post('/profil/import', [App\Http\Controllers\ProfilController::class, 'import']);
-
 
 Route::get('/pesdik', [App\Http\Controllers\PesertaDidikController::class, 'index']);
 Route::get('/pesdik/export', [App\Http\Controllers\PesertaDidikController::class, 'export']);
@@ -76,9 +59,7 @@ Route::get('/tendik/export', [App\Http\Controllers\TendikController::class, 'exp
 Route::get('/guru', [App\Http\Controllers\GuruController::class, 'index']);
 Route::get('/guru/export', [App\Http\Controllers\GuruController::class, 'export']);
 
-
 Route::get('/user', [App\Http\Controllers\UserController::class, 'user']);
-//Login Routes
 
 Auth::routes();
 
@@ -95,19 +76,16 @@ Route::post('/coba', [cobaController::class, 'authenticate']);
 
 Route::get('/login', [LoginController::class, 'login']);
 Route::post('/login', [LoginController::class, 'authenticate']);
-//cobakk
+
 Route::get('/test', [TestController::class, 'test'])->name('test');
 Route::post('actionlogin', [TestController::class, 'actionlogin'])->name('actionlogin');
 
 Route::get('dashboard', [dashboardController::class, 'dashboard'])->name('dashboard')->middleware('auth');
 
-Auth::routes();
-
-
-Route::get('/user', [App\Http\Controllers\UserController::class, 'user']);Route::get('/', [App\Http\Controllers\LoginController::class, 'login'])->name('login');
+Route::get('/user', [App\Http\Controllers\UserController::class, 'user']);
+Route::get('/', [App\Http\Controllers\LoginController::class, 'login'])->name('login');
 Route::post('login',[App\Http\Controllers\LoginController::class], 'authenticate')->name('login.auth');
 Route::get('/admin', [App\Http\Controllers\adminController::class, 'admin'])->middleware('auth');
-
 
 Route::get('/admins', [App\Http\Controllers\adminsController::class, 'admins']);
 Route::get('/sups_admin', [App\Http\Controllers\superController::class, 'super']);
@@ -123,8 +101,4 @@ Route::post('actionlogin', [App\Http\Controllers\TestController::class, 'actionl
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-//Cobaaas
 Route::get('/tests', function() {return view('tests'); });
-// End 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
