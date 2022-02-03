@@ -33,17 +33,19 @@ use App\Http\Controllers\ProfilControlle;
 |
 */
 
+<<<<<<< HEAD
+=======
 Route::get('/sup_admin', [App\Http\Controllers\SupAdminController::class, 'index'])->name('dashboard_admin');
 
 <<<<<<< HEAD
 Route::get('/pd', [App\Http\Controllers\PesertaDidikController::class, 'peserta'])->name('daftar-pd-lembaga');
 Route::post('/pd/import', [App\Http\Controllers\PesertaDidikController::class, 'import'])->name('import-pd-lembaga');
+>>>>>>> 0861372e8270c9a967139c20b2f862ac689e6f20
 Route::get('/sup_admin', [App\Http\Controllers\SupAdminController::class, 'index'])->name('dashboard_admin');
 Route::get('/pd', [App\Http\Controllers\DataPDController::class, 'index'])->name('daftar_pd');
 Route::post('/pd', [App\Http\Controllers\DataPDController::class, 'import']);
 Route::get('/profil', [App\Http\Controllers\ProfilController::class, 'index'])->name('daftar_profil');
 Route::post('/profil/import', [App\Http\Controllers\ProfilController::class, 'import']);
-
 
 Route::get('/sups_admin', [App\Http\Controllers\superController::class, 'index'])->name('sups_admin');
 
@@ -57,6 +59,12 @@ Route::post('/pd', [App\Http\Controllers\DataPDController::class, 'import']);
 Route::get('/td', [App\Http\Controllers\DataTendikController::class, 'index'])->name('daftar_tendik');
 Route::post('/td', [App\Http\Controllers\DataTendikController::class, 'import']);
 Route::get('/gr', [App\Http\Controllers\DataGuruController::class, 'index'])->name('daftar_guru');
+<<<<<<< HEAD
+Route::post('/gr/import', [App\Http\Controllers\DataGuruController::class, 'import']);
+
+Route::get('/profil', [App\Http\Controllers\ProfilController::class, 'index'])->name('daftar_profil');
+Route::post('/profil/import', [App\Http\Controllers\ProfilController::class, 'import']);
+=======
 Route::post('/gr', [App\Http\Controllers\DataGuruController::class, 'import']);
 <<<<<<< HEAD
 =======
@@ -87,11 +95,13 @@ Route::get('/guru', [App\Http\Controllers\GuruController::class, 'index']);
 Route::get('/guru/export', [App\Http\Controllers\GuruController::class, 'export']);
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> 7928e38be46e03c5f1078b4932d1f46b70865fe5
+>>>>>>> 0861372e8270c9a967139c20b2f862ac689e6f20
 Route::get('/user', [App\Http\Controllers\UserController::class, 'user']);
-//Login Routes
 
 Auth::routes();
 
@@ -106,12 +116,16 @@ Route::post('/coba', [cobaController::class, 'authenticate']);
 
 Route::get('/login', [LoginController::class, 'login']);
 Route::post('/login', [LoginController::class, 'authenticate']);
-//cobakk
+
 Route::get('/test', [TestController::class, 'test'])->name('test');
 Route::post('actionlogin', [TestController::class, 'actionlogin'])->name('actionlogin');
 
 Route::get('dashboard', [dashboardController::class, 'dashboard'])->name('dashboard')->middleware('auth');
 
+<<<<<<< HEAD
+Route::get('/user', [App\Http\Controllers\UserController::class, 'user']);
+Route::get('/', [App\Http\Controllers\LoginController::class, 'login'])->name('login');
+=======
 <<<<<<< HEAD
 
 Route::get('/', [App\Http\Controllers\LoginController::class, 'login'])->name('login');
@@ -121,9 +135,9 @@ Auth::routes();
 
 
 Route::get('/user', [App\Http\Controllers\UserController::class, 'user']);Route::get('/', [App\Http\Controllers\LoginController::class, 'login'])->name('login');
+>>>>>>> 0861372e8270c9a967139c20b2f862ac689e6f20
 Route::post('login',[App\Http\Controllers\LoginController::class], 'authenticate')->name('login.auth');
 Route::get('/admin', [App\Http\Controllers\adminController::class, 'admin'])->middleware('auth');
-
 
 Route::get('/admins', [App\Http\Controllers\adminsController::class, 'admins']);
 Route::get('/sups_admin', [App\Http\Controllers\superController::class, 'super']);
@@ -139,6 +153,9 @@ Route::post('actionlogin', [App\Http\Controllers\TestController::class, 'actionl
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+<<<<<<< HEAD
+Route::get('/tests', function() {return view('tests'); });
+=======
 //Cobaaas
 Route::get('/tests', function() {return view('tests'); });
 // End 
@@ -151,3 +168,4 @@ Route::get('/admin', [App\Http\Controllers\adminController::class, 'admin'])->mi
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 >>>>>>> 7928e38be46e03c5f1078b4932d1f46b70865fe5
+>>>>>>> 0861372e8270c9a967139c20b2f862ac689e6f20

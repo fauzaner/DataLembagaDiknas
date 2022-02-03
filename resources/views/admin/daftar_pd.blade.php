@@ -12,8 +12,8 @@
 <div class="data-master relative flex items-top min-h-screen sm:pt-0">
 >>>>>>> 7928e38be46e03c5f1078b4932d1f46b70865fe5
     <div class="container overflow-x-scroll">
-        <div class="card-user shadow mb-4">
-            <div class="card-header py-3">
+        <div class="card-user shadow mb-2">
+            <div class="card-header py-2">
                 <div class="col-md-12">
                     <h1 class="m-0 font-weight-bold" style="color: 	#8B0000;">Data Peserta Didik</h1>
 <<<<<<< HEAD

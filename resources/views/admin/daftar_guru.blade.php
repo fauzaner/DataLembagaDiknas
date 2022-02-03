@@ -1,7 +1,12 @@
 @extends('layouts.main_admin')
 @section('content')
+<<<<<<< HEAD
+<span class="text">Guru</span>
+<div class="data-master">
+=======
 <span class="text-title">Guru</span>
 <div class="data-gr">
+>>>>>>> 0861372e8270c9a967139c20b2f862ac689e6f20
     <div class="container overflow-x-scroll">
         <div class="card-user shadow mb-4">
             <div class="card-header py-3">
