@@ -18,35 +18,30 @@
   z-index: 99;
   transition: all 0.5s ease;
 }
+
 .sidebar.close{
   width: 78px;
 }
 .sidebar .logo-details{
-  height: 60px;
   width: 100%;
-  display: flex;
+  display: absolute;
   align-items: center;
-  margin-left: 30px;
-}
-.sidebar .logo-details i{
-  font-size: 10px;
-  height: 50px;
-  min-width: 78px;
-  text-align: center;
-  line-height: 50px;
 }
 .sidebar .logo-details .logo_name{
   font-size: 20px;
   color: #fff;
-  margin-left: 10px;
+  border-radius: 20px;
+  border-width: 20px;
   font-weight: 600;
   transition: 0.3s ease;
+  text-align: center;
   transition-delay: 0.1s;
 }
 .sidebar.close .logo-details .logo_name{
   transition-delay: 0s;
   opacity: 0;
   pointer-events: none;
+
 }
 .sidebar .nav-links{
   height: 100%;
@@ -172,7 +167,7 @@
   align-items: center;
   justify-content: space-between;
   background: #dde6ff;
-  padding: 12px 0;
+  padding: 8px 0;
   color: #11101d;
   transition: all 0.5s ease;
 }
@@ -214,10 +209,10 @@
 }
 .home-section{
   position: absolute;
-  min-height: 50vh;
+  min-height: 100vh;
   top: 0;
   left: 250px;
-  width: calc(100% - 250px);
+  width: calc(100% - 78px);
   transition: all 0.5s ease;
   z-index: 2;
   padding-left: 20px;
@@ -245,6 +240,11 @@
 .home-section .home-content .text{
   font-size: 26px;
   font-weight: 600;
+}
+
+/* logo */
+.logo-dinas {
+  align-content: center;
 }
 
 /* Menu Button */
@@ -393,11 +393,42 @@ div.dataTables_wrapper {
   margin-top: 20px;
 }
 
-
+/* Data-data */
 .data-master {
+<<<<<<< HEAD
   padding-top: 600px;
+=======
+  margin-left: -220px;
+  height: 50%;
+}
+
+.data-pesdik {
+  margin-left: -110px;
+  height: 50%;
+}
+
+.data-user {
+  margin-left: -110px;
+  height: 50%;
+}
+
+.data-gr {
+>>>>>>> 0861372e8270c9a967139c20b2f862ac689e6f20
   margin-left: -100px;
-  
+  height: 50%;
+}
+.data-guru {
+  margin-left: -110px;
+  height: 50%;
+}
+
+.data-td {
+  margin-left: -110px;
+  height: 50%;
+}
+.data-tendik {
+  margin-left: -110px;
+  height: 50%;
 }
 
 .table {
@@ -415,7 +446,6 @@ div.dataTables_wrapper {
   margin-bottom: 90px;
   padding-bottom: 20px;
 }
-
 
 .text-img {
   text-align: left;
@@ -461,6 +491,13 @@ div.dataTables_wrapper {
 .btn-tambah {
   margin-top: -35px;
   margin-right: 45px;
+}
+
+/* text */
+.text-title {
+  text-align: left;
+  font-size: 30px;
+  font-weight: bold;
 }
 @media (max-width: 420px) {
   .sidebar.close .nav-links li .sub-menu{

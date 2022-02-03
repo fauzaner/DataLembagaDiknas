@@ -1,13 +1,13 @@
 @extends('layouts.main_admin')
 @section('content')
-<span class="text">Pesdik</span>
-<div class="data-master">
+<span class="text-title">Guru</span>
+<div class="data-gr">
     <div class="container overflow-x-scroll">
         <div class="card-user shadow mb-4">
             <div class="card-header py-3">
                 <div class="col-md-12">
                     <h1 class="m-0 font-weight-bold" style="color: 	#8B0000;">Data Guru</h1>
-                    <button style="float: right; font-weight: 600; background: 	#3CB371; color: white;" class="btn btn-success float-right mb-1" type="button" data-toggle="modal" data-target="#ModalCreate">
+                    <button style="float: right; font-weight: 600; background: 	#3CB371; color: white;" class="btn btn-import btn-success float-right mb-1" type="button" data-toggle="modal" data-target="#ModalCreate">
                         Import
                     </button>
                 </div>
@@ -153,7 +153,7 @@
 <form action="/gr/import" method="post" enctype="multipart/form-data">
 >>>>>>> 48f3367597c45d93df94bcf3ff0444adc68d68c7
     @csrf
-    <div class="modal fade text-left" id="ModalCreate" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal pop-up fade text-left" id="ModalCreate" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
