@@ -21,11 +21,14 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                     <button style="float: right; font-weight: 600; background: 	#3CB371; color: white;" class="btn btn-success float-right mb-1" type="button" data-toggle="modal" data-target="#ModalCreate">
 =======
 >>>>>>> 13884a07b643174c9aa5450ff538c236ebef73c7
 >>>>>>> 48f3367597c45d93df94bcf3ff0444adc68d68c7
 >>>>>>> 7928e38be46e03c5f1078b4932d1f46b70865fe5
+>>>>>>> 0861372e8270c9a967139c20b2f862ac689e6f20
                     <button style="float: right; font-weight: 600; background: 	#3CB371; color: white;" class="btn btn-import btn-success float-right mb-1" type="button" data-toggle="modal" data-target="#ModalCreate">
                         Import
                     </button>

@@ -397,8 +397,11 @@ div.dataTables_wrapper {
 .data-master {
 <<<<<<< HEAD
   padding-top: 600px;
+<<<<<<< HEAD
+=======
   margin-left: -100px;
   
+>>>>>>> eea1ac40ba24b07ec177f5dac4338623429f3b4d
 =======
   margin-left: -220px;
   height: 50%;
@@ -415,6 +418,7 @@ div.dataTables_wrapper {
 }
 
 .data-gr {
+>>>>>>> 0861372e8270c9a967139c20b2f862ac689e6f20
   margin-left: -100px;
   height: 50%;
 }

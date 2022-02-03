@@ -44,6 +44,8 @@ Route::post('/profil/import', [App\Http\Controllers\ProfilController::class, 'im
 
 Route::post('/gr', [App\Http\Controllers\DataGuruController::class, 'import']);
 
+Route::post('/gr', [App\Http\Controllers\DataGuruController::class, 'import']);
+
 Route::get('/admin', function () {return view('admin'); }); 
 Route::get('/sup_admin', function () {return view('sup_admin'); });
 
