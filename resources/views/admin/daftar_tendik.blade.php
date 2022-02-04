@@ -11,6 +11,10 @@
                         Import
                     </button>
                 </div>
+                <form action="/td/cari" method="GET">
+                    <input type="text" name="cari" placeholder="Search" value="{{ old('cari') }}">
+                    <input type="submit" value="CARI">
+                </form>
             </div>
             <div class="card-body">
                 <div class="table-responsive nowrap">

@@ -14,7 +14,7 @@
     <!-- css -->
     <link rel="stylesheet" href="{{asset('assets/css/tests.css')}}">
 
-    <title>Hello, world!</title>
+    <title>Data WareHouse</title>
   </head>
   <body>
   @include('sweetalert::alert')
@@ -47,6 +47,12 @@
           <li><a href="/td">Data Tendik</a></li>
           <li><a href="/pd">Data Peserta</a></li>
         </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-cog' ></i>
+          <span class="link_name">Setting</span>
+        </a>
       </li>
       <li>
     <div class="profile-details">

@@ -50,4 +50,19 @@ class PesertaDidikController extends Controller
         Alert::success('Congrats', 'Berhasil Menambahkan Data Peserta Didik');
         return back();
     }
+
+    public function cari(Request $request)
+	{
+		// menangkap data pencarian
+		$cari = $request->cari;
+ 
+    	// mengambil data dari table pegawai sesuai pencarian data
+		$peserta_didik = DB::table('peserta_didik')
+		->where('nik_pd','like',"%".$cari."%")
+		->paginate();
+ 
+    	// mengirim data pegawai ke view index
+		return view('sup_admin.peserta_didik',['peserta_didik' => $peserta_didik]);
+ 
+	}
 }

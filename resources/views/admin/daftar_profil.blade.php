@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.main_admin')
 @section('content')
     <div class="data relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
             <div class="container-fluid" style="margin-top: 0 !important;">
