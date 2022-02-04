@@ -1,12 +1,7 @@
 @extends('layouts.main_admin')
 @section('content')
-<<<<<<< HEAD
-<div class="text" style="font-size: 10px">Tenaga Kependidikan</div>
-<div class="data-master relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
-=======
 <span class="text-title">Tendik</span>
 <div class="data-tendik">
->>>>>>> 0861372e8270c9a967139c20b2f862ac689e6f20
     <div class="container overflow-x-scroll">
         <div class="card-user shadow mb-4">
             <div class="card-header py-3">
@@ -16,6 +11,10 @@
                         Import
                     </button>
                 </div>
+                <form action="/td/cari" method="GET">
+                    <input type="text" name="cari" placeholder="Search" value="{{ old('cari') }}">
+                    <input type="submit" value="CARI">
+                </form>
             </div>
             <div class="card-body">
                 <div class="table-responsive nowrap">

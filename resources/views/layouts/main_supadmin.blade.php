@@ -25,12 +25,12 @@
     </div>
     <ul class="nav-links">
       <li>
-        <a href="/admins">
+        <a href="/sups_admin">
           <i class='bx bx-grid-alt' ></i>
           <span class="link_name">Dashboard</span>
         </a>
         <ul class="sub-menu blank">
-          <li><a class="link_name" href="/admins">Dashboard</a></li>
+          <li><a class="link_name" href="/sups_admin">Dashboard</a></li>
         </ul>
       </li>
       <li>
@@ -43,10 +43,9 @@
         </div>
         <ul class="sub-menu">
           <li><a class="link_name" href="#">Data Master</a></li>
-          <li><a href="/gr">Data Guru</a></li>
-          <li><a href="/td">Data Tendik</a></li>
-          <li><a href="/pd">Data Peserta</a></li>
-<<<<<<< HEAD
+          <li><a href="/guru">Data Guru</a></li>
+          <li><a href="/tendik">Data Tendik</a></li>
+          <li><a href="/pesdik">Data Peserta</a></li>
         </ul>
       </li>
       <li>
@@ -54,11 +53,6 @@
           <i class='bx bx-cog' ></i>
           <span class="link_name">Setting</span>
         </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Setting</a></li>
-=======
->>>>>>> 0861372e8270c9a967139c20b2f862ac689e6f20
-        </ul>
       </li>
       <li>
     <div class="profile-details">

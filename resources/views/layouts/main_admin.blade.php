@@ -46,7 +46,6 @@
           <li><a href="/gr">Data Guru</a></li>
           <li><a href="/td">Data Tendik</a></li>
           <li><a href="/pd">Data Peserta</a></li>
-<<<<<<< HEAD
         </ul>
       </li>
       <li>
@@ -54,11 +53,6 @@
           <i class='bx bx-cog' ></i>
           <span class="link_name">Setting</span>
         </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Setting</a></li>
-=======
->>>>>>> 0861372e8270c9a967139c20b2f862ac689e6f20
-        </ul>
       </li>
       <li>
     <div class="profile-details">

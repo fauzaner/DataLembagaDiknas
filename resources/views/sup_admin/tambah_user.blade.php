@@ -1,14 +1,11 @@
 @extends('layouts.main_supadmin')
 @section('content')
-<span class="text-title">Tambah User</span>
+<span class="text-title">User</span>
 <div class="container data-master">
     <div class="card-user shadow mb-4">
         <div class="card-header py-3">
             <div class="col-md-12">
                 <h3 class="m-0 font-weight-bold" style="color: #8B0000;">Data User</h3>
-                <button style="float: right; font-weight: 600; background: 	#3CB371; color: white;" class="btn btn-tambah btn-success float-right mb-1" type="button" data-toggle="modal" data-target="#ModalCreate">
-                  Create User
-                </button>
             </div>
         </div>
         <div class="card-body">
@@ -35,8 +32,15 @@
                             <td>{{ $users->username }}</td>
                             <td>{{ $users->password }}</td>
                             <td>{{ $users->is_admin }}</td>
-                            <td><button class="btn btn-danger" data-toggle="modal" data-target="#modalHapusUser">Delete</button></td>
-                        </tr>
+                            <td>
+                              <button class="btn btn-success" type="button" data-toggle="modal" data-target="#ModalEdit">Edit</button>
+                              <form method="POST" action="{{ url('user/delete', $users->username ) }}">
+                                @csrf
+                                @method('DELETE') 
+                              <button class="btn btn-danger" onclick="return confirm('Apakah yakin menghapus user ini?')">Delete</button>
+                              </form>
+                            </td>
+                          </tr>
                         @empty
                         <td colspan="4" class="table-active text-center">Tidak Ada Data</td>
                         @endforelse
@@ -46,33 +50,36 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="tambahUser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Recipient:</label>
-            <input type="text" class="form-control" id="recipient-name">
-          </div>
-          <div class="mb-3">
-            <label for="message-text" class="col-form-label">Message:</label>
-            <textarea class="form-control" id="message-text"></textarea>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
-      </div>
-    </div>
-  </div>
-</div>
+
 @endsection
 @section('modal')
-@include('modal.tambah_user')
+
+@if ($message = Session::get('success'))
+   <p>{{ $message }}</p>
+@endif
+
+<form method="POST" action="{{ url('user/update', $users->username ) }}" enctype="multipart/form-data">
+    @csrf
+    <div class="modal pop-up fade text-left" id="ModalEdit" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Edit Data User</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group mb-3" id="ModalEdit">
+                    <input name="name" value="{{ $users->name }}" type="text" placeholder="Name..."> 
+                    <input name="username" value="{{ $users->username }}" type="text" placeholder="Username...">
+                    <input name="password" value="{{ $users->password }}" type="text" placeholder="Password...">
+                    <input name="admin" value="{{ $users->is_admin }}" type="text" placeholder="Admin...">
+                    <button class="btn btn-primary" type="submit" id="button-addon2">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+</form>
 @endsection

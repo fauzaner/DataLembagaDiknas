@@ -1,17 +1,13 @@
 @extends('layouts.main_supadmin')
 @section('content')
-<<<<<<< HEAD
-<span class="text-title">Pesdik</span>
+<span class="text-title" style="font-color: #ffffff">Peserta</span>
 <div class="data-pesdik">
-=======
-<span class="text">Pesdik</span>
-<div class="data-master relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
->>>>>>> 7928e38be46e03c5f1078b4932d1f46b70865fe5
 <div class="container overflow-x-scroll">
-                    <form action="/pesdik/export" method="post" enctype="multipart/form-data">
-                    <form action="/pesdik" method="post" enctype="multipart/form-data">
-                        @csrf
-                    </form>
+    <form action="/pesdik/export" method="post" enctype="multipart/form-data">
+    <form action="/pesdik" method="post" enctype="multipart/form-data">
+        @csrf
+    </form>
+    </form>
         <div class="card-user shadow mb-4">
             <div class="card-header py-3">
             <div class="row">
@@ -19,6 +15,10 @@
                 <a href="/pesdik/export" class="btn  buttonex btn-success col-md-2 mb-2 " target="_blank">Export</a>
             </div>
         </div>
+        <form action="/pesdik/cari" method="GET">
+            <input type="text" name="cari" placeholder="Search" value="{{ old('cari') }}">
+            <input type="submit" value="CARI">
+        </form>
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered table-striped table-hover" width="100%" cellspacing="0">
