@@ -14,6 +14,10 @@
                 <a href="/guru/export" class="btn  buttonex btn-success col-md-2 mb-2 " target="_blank">Export</a>
             </div>
         </div>
+        <form action="/guru/cari" method="GET">
+            <input type="text" name="cari" placeholder="Search" value="{{ old('cari') }}">
+            <input type="submit" value="CARI">
+        </form>
         <div class="card-body">
             <div class="table-responsive">
                 <table style="color: #708090;" class="table table-bordered table-striped yajra-datatable" id="data_users_side" width="100%" cellspacing="0">

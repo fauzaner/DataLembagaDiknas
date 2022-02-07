@@ -30,4 +30,19 @@ class TendikController extends Controller
 	{
 		return Excel::download(new TendikExport, 'tendik.xlsx');
 	}
+
+    public function cari(Request $request)
+	{
+		// menangkap data pencarian
+		$cari = $request->cari;
+ 
+    	// mengambil data dari table pegawai sesuai pencarian data
+		$tendik = DB::table('tendik')
+		->where('nik_pd','like',"%".$cari."%")
+		->paginate();
+ 
+    	// mengirim data pegawai ke view index
+		return view('sup_admin.tendik',['tendik' => $tendik]);
+ 
+	}
 }

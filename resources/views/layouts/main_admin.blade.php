@@ -53,9 +53,12 @@
           <i class='bx bx-cog' ></i>
           <span class="link_name">Setting</span>
         </a>
+<<<<<<< HEAD
         <ul class="sub-menu blank">
           <li><a class="link_name" href="#">Setting</a></li>
         </ul>
+=======
+>>>>>>> cbd0edd7b4fa5af2447577c2abec4e50c50a1f1c
       </li>
       <li>
     <div class="profile-details">

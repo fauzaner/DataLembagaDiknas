@@ -30,4 +30,19 @@ class GuruController extends Controller
 	{
 		return Excel::download(new GuruExport, 'guru.xlsx');
 	}
+
+    public function cari(Request $request)
+	{
+		// menangkap data pencarian
+		$cari = $request->cari;
+ 
+    	// mengambil data dari table pegawai sesuai pencarian data
+		$guru = DB::table('guru')
+		->where('nik_gr','like',"%".$cari."%")
+		->paginate();
+ 
+    	// mengirim data pegawai ke view index
+		return view('sup_admin.guru',['guru' => $guru]);
+ 
+	}
 }

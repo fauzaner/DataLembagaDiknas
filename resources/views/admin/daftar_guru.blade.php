@@ -11,6 +11,10 @@
                         Import
                     </button>
                 </div>
+                <form action="/gr/cari" method="GET">
+                    <input type="text" name="cari" placeholder="Search" value="{{ old('cari') }}">
+                    <input type="submit" value="CARI">
+                </form>
             </div>
             <div class="card-body">
                 <div class="table-responsive nowrap">
@@ -145,9 +149,14 @@
 </div>
 @endsection
 @section('modal')
+<<<<<<< HEAD
 
 <form action="/gr" method="post" enctype="multipart/form-data">
 <form action="/gr/import" method="post" enctype="multipart/form-data">
+=======
+<form action="/gr" method="POST" enctype="multipart/form-data">
+<form action="/gr/import" method="POST" enctype="multipart/form-data">
+>>>>>>> cbd0edd7b4fa5af2447577c2abec4e50c50a1f1c
     @csrf
     <div class="modal pop-up fade text-left" id="ModalCreate" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
