@@ -24,7 +24,7 @@ class CreateProfilTable extends Migration
             $table->string('kode_pos',50)->nullable();
             $table->string('kelurahan',255)->nullable();
             $table->string('kecamatan',255)->nullable();
-            $table->string('kota/provinsi',255)->nullable();
+            $table->string('kota_kabupaten',255)->nullable();
             $table->string('provinsi',255)->nullable();
             $table->string('negara',255)->nullable();
             $table->string('lintang',100)->nullable();
@@ -33,6 +33,7 @@ class CreateProfilTable extends Migration
             $table->string('tgl_sk',100)->nullable();
             $table->string('status_milik',255)->nullable();
             $table->string('sk_izin_operasional',255)->nullable();
+            $table->string('tgl_sk_izin',255)->nullable();
             $table->string('keb_khusus_dilayani',255)->nullable();
             $table->string('nomor_rekening',255)->nullable();
             $table->string('nama_bank',100)->nullable();

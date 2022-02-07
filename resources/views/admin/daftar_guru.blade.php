@@ -1,12 +1,7 @@
 @extends('layouts.main_admin')
 @section('content')
-<<<<<<< HEAD
-<span class="text">Guru</span>
-<div class="data-master">
-=======
 <span class="text-title">Guru</span>
 <div class="data-gr">
->>>>>>> 0861372e8270c9a967139c20b2f862ac689e6f20
     <div class="container overflow-x-scroll">
         <div class="card-user shadow mb-4">
             <div class="card-header py-3">
@@ -150,13 +145,9 @@
 </div>
 @endsection
 @section('modal')
-<<<<<<< HEAD
-<form action="/gr" method="POST" enctype="multipart/form-data">
-<form action="/gr/import" method="POST" enctype="multipart/form-data">
-=======
+
 <form action="/gr" method="post" enctype="multipart/form-data">
 <form action="/gr/import" method="post" enctype="multipart/form-data">
->>>>>>> 48f3367597c45d93df94bcf3ff0444adc68d68c7
     @csrf
     <div class="modal pop-up fade text-left" id="ModalCreate" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">

@@ -7,6 +7,7 @@ use App\Models\Profil;
 use Illuminate\Support\Facades\DB;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Imports\ProfilImport;
+use Alert;
 
 class ProfilController extends Controller
 {
